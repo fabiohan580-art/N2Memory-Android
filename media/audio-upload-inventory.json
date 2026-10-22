@@ -1,0 +1,839 @@
+{
+  "summary": {
+    "archives": 102,
+    "archive_bytes": 4560419723,
+    "levels": {
+      "N1": 31,
+      "N2": 31,
+      "N3": 27,
+      "N4": 9,
+      "N5": 4
+    },
+    "audio_references": 3401,
+    "audio_reference_bytes": 6612085665,
+    "unique_audio": 3259,
+    "unique_audio_bytes": 6535561778,
+    "duplicate_audio_references": 142,
+    "errors": [],
+    "uploaded_audio": 0,
+    "status": "prepared_local_not_uploaded"
+  },
+  "archives": [
+    {
+      "archive": "2010-07_N1.zip",
+      "exam_id": "2010-07_N1",
+      "archive_bytes": 43982158,
+      "archive_sha256": "865669b128556bcc6c5d6889df51e2573fe1923e5641ea78bac132011dc6f7e6",
+      "audio_references": 42,
+      "audio_bytes": 77808851
+    },
+    {
+      "archive": "2010-07_N2.zip",
+      "exam_id": "2010-07_N2",
+      "archive_bytes": 26069445,
+      "archive_sha256": "8e10499c578b807c6e2c37003903287eabe089d76044343f023f522c723d0a6d",
+      "audio_references": 37,
+      "audio_bytes": 40522986
+    },
+    {
+      "archive": "2010-07_N3.zip",
+      "exam_id": "2010-07_N3",
+      "archive_bytes": 36906524,
+      "archive_sha256": "1395f38de3d209c280783326ae73f7af7965bad122150cbc2ae4e63e645a7391",
+      "audio_references": 34,
+      "audio_bytes": 74330250
+    },
+    {
+      "archive": "2010-07_N4.zip",
+      "exam_id": "2010-07_N4",
+      "archive_bytes": 35157453,
+      "archive_sha256": "a154c941fbe03388f7c110b963b47402e486a136c6816b7c0e9d397e443f8bf5",
+      "audio_references": 32,
+      "audio_bytes": 57538321
+    },
+    {
+      "archive": "2010-07_N5.zip",
+      "exam_id": "2010-07_N5",
+      "archive_bytes": 28749316,
+      "archive_sha256": "e62aadcd4a5772e6280b845121112082d4c3c64b68a6009be80b38659d482675",
+      "audio_references": 29,
+      "audio_bytes": 50751504
+    },
+    {
+      "archive": "2010-12_N1.zip",
+      "exam_id": "2010-12_N1",
+      "archive_bytes": 59985615,
+      "archive_sha256": "49c280e184e26115aa79cd53b52065b0adaaf841be8f9a069729630a99e289d8",
+      "audio_references": 41,
+      "audio_bytes": 67018425
+    },
+    {
+      "archive": "2010-12_N2.zip",
+      "exam_id": "2010-12_N2",
+      "archive_bytes": 73307674,
+      "archive_sha256": "9de04e9f3f01ba86db91ea86c2dfbe5927b9109d91eab0be3ee4f3fdfaa7a0c1",
+      "audio_references": 37,
+      "audio_bytes": 75606017
+    },
+    {
+      "archive": "2011-07_N1.zip",
+      "exam_id": "2011-07_N1",
+      "archive_bytes": 59346036,
+      "archive_sha256": "b6668854bdcf7b4c2f37447a9a758d38b5c62498aec763071083f00d6d877fdb",
+      "audio_references": 41,
+      "audio_bytes": 88187466
+    },
+    {
+      "archive": "2011-07_N2.zip",
+      "exam_id": "2011-07_N2",
+      "archive_bytes": 28466000,
+      "archive_sha256": "e2f919f9ee1e6fa929c4bf80329049ab788db0350259e5bbe035366dc2aaf420",
+      "audio_references": 36,
+      "audio_bytes": 41277414
+    },
+    {
+      "archive": "2011-07_N3.zip",
+      "exam_id": "2011-07_N3",
+      "archive_bytes": 31542457,
+      "archive_sha256": "aa7609be216b1a9822504e90dfb5ac5996455b54e540f739bfa828523e12bce6",
+      "audio_references": 33,
+      "audio_bytes": 56362842
+    },
+    {
+      "archive": "2011-12_N1.zip",
+      "exam_id": "2011-12_N1",
+      "archive_bytes": 54504194,
+      "archive_sha256": "fa246bcb532d0b5631ac1855dac6d8641badcb7f76f83865d1c1d2ecaac40fc5",
+      "audio_references": 41,
+      "audio_bytes": 81691487
+    },
+    {
+      "archive": "2011-12_N2.zip",
+      "exam_id": "2011-12_N2",
+      "archive_bytes": 28974236,
+      "archive_sha256": "0f3f4464385d15faa41e0c68a84ad85294900f4b5aca2246535f89fefabc2bed",
+      "audio_references": 36,
+      "audio_bytes": 42071955
+    },
+    {
+      "archive": "2011-12_N3.zip",
+      "exam_id": "2011-12_N3",
+      "archive_bytes": 31553759,
+      "archive_sha256": "796e33288d31d448a2330e31023e7606e79d87b5a3471c85edae2b8147860fa7",
+      "audio_references": 33,
+      "audio_bytes": 54813705
+    },
+    {
+      "archive": "2012-07_N1.zip",
+      "exam_id": "2012-07_N1",
+      "archive_bytes": 42914448,
+      "archive_sha256": "6cefe6be3b9d9c7b777aa93813dacfc7b9453f0fd30b492338dc85d0f6da003b",
+      "audio_references": 41,
+      "audio_bytes": 65938077
+    },
+    {
+      "archive": "2012-07_N2.zip",
+      "exam_id": "2012-07_N2",
+      "archive_bytes": 27978526,
+      "archive_sha256": "8d8e976860b92a264b3b932d3858adad1327f5d07504d71a2ff99e3736397170",
+      "audio_references": 36,
+      "audio_bytes": 40424517
+    },
+    {
+      "archive": "2012-07_N3.zip",
+      "exam_id": "2012-07_N3",
+      "archive_bytes": 82922150,
+      "archive_sha256": "fa486d2312c4dca00089b6a76a1045680bce78ac5d3f0e1950a194fb8e2c2da7",
+      "audio_references": 34,
+      "audio_bytes": 95055835
+    },
+    {
+      "archive": "2012-07_N4.zip",
+      "exam_id": "2012-07_N4",
+      "archive_bytes": 33254415,
+      "archive_sha256": "a9c984cd18f192fb5c1af5d5643d57d35a50af784724463d3a3af40527e0d17e",
+      "audio_references": 33,
+      "audio_bytes": 59212246
+    },
+    {
+      "archive": "2012-12_N1.zip",
+      "exam_id": "2012-12_N1",
+      "archive_bytes": 81022373,
+      "archive_sha256": "682aa40c0e50105e1e7650858280e77c2773ff9fea00ecd56a78da7ded74be65",
+      "audio_references": 41,
+      "audio_bytes": 91394717
+    },
+    {
+      "archive": "2012-12_N2.zip",
+      "exam_id": "2012-12_N2",
+      "archive_bytes": 27116428,
+      "archive_sha256": "56a0cdc9248f6d7841b46d11ac0945ace1ff6d9aedf349e881a2b08fdf2dd62c",
+      "audio_references": 36,
+      "audio_bytes": 38736258
+    },
+    {
+      "archive": "2012-12_N3.zip",
+      "exam_id": "2012-12_N3",
+      "archive_bytes": 34849131,
+      "archive_sha256": "265f2bf1b0ed6925636484bea6175aaf5a04a7a3996f50df03847b402ba9c1d1",
+      "audio_references": 34,
+      "audio_bytes": 67355269
+    },
+    {
+      "archive": "2012-12_N5.zip",
+      "exam_id": "2012-12_N5",
+      "archive_bytes": 25305355,
+      "archive_sha256": "28960d3ebfc48c60e974345f14d4bef2c41b7dea183eace1dcf69e44e08a5e96",
+      "audio_references": 29,
+      "audio_bytes": 51250126
+    },
+    {
+      "archive": "2013-07_N1.zip",
+      "exam_id": "2013-07_N1",
+      "archive_bytes": 43778547,
+      "archive_sha256": "d93a504f91bf97d53980c9996de0a2b5b5303b690e02e05252bb66a978c6c691",
+      "audio_references": 41,
+      "audio_bytes": 67087989
+    },
+    {
+      "archive": "2013-07_N2.zip",
+      "exam_id": "2013-07_N2",
+      "archive_bytes": 27286308,
+      "archive_sha256": "c99e6c3c8a2e9dba92744eb328451b7be8e8f4b01bdb4854c02b278853637b08",
+      "audio_references": 36,
+      "audio_bytes": 39580479
+    },
+    {
+      "archive": "2013-07_N3.zip",
+      "exam_id": "2013-07_N3",
+      "archive_bytes": 33583902,
+      "archive_sha256": "836847eb12482533b62b96b5903e7dc65495342352b2fc818aa8e845a7473147",
+      "audio_references": 34,
+      "audio_bytes": 58623699
+    },
+    {
+      "archive": "2013-07_N4.zip",
+      "exam_id": "2013-07_N4",
+      "archive_bytes": 35911894,
+      "archive_sha256": "da86ddc62aadaa3d6a78fe682a15eedba78c82b2eae92f7e8b3ba198d2aaf707",
+      "audio_references": 33,
+      "audio_bytes": 61461287
+    },
+    {
+      "archive": "2013-07_N5.zip",
+      "exam_id": "2013-07_N5",
+      "archive_bytes": 25652135,
+      "archive_sha256": "2e26d1cc451ccd2193d6844579cd85b11f4e60e548d233ddcb04bb9729e96f88",
+      "audio_references": 25,
+      "audio_bytes": 34340660
+    },
+    {
+      "archive": "2013-12_N1.zip",
+      "exam_id": "2013-12_N1",
+      "archive_bytes": 44795506,
+      "archive_sha256": "892628b36f4e23c4f551bbff782ec199c845cb99752b68645d97b8b1cf3c6d4e",
+      "audio_references": 41,
+      "audio_bytes": 69263233
+    },
+    {
+      "archive": "2013-12_N2.zip",
+      "exam_id": "2013-12_N2",
+      "archive_bytes": 29258766,
+      "archive_sha256": "ee98473244e2875095f72d619d5c6c2decaa76cb83fe2ed46a482053a5a344bc",
+      "audio_references": 37,
+      "audio_bytes": 42316140
+    },
+    {
+      "archive": "2013-12_N3.zip",
+      "exam_id": "2013-12_N3",
+      "archive_bytes": 36051785,
+      "archive_sha256": "ef5d64e9f88c1e58e9eee02aee2131dc568a182dc5657f6c24544a2c5d9d359e",
+      "audio_references": 34,
+      "audio_bytes": 60798048
+    },
+    {
+      "archive": "2013-12_N4.zip",
+      "exam_id": "2013-12_N4",
+      "archive_bytes": 43213126,
+      "archive_sha256": "480d73259bc6387b0ced98906a3f624a509edd45f12429f986650b5f4905cc07",
+      "audio_references": 33,
+      "audio_bytes": 67805860
+    },
+    {
+      "archive": "2014-07_N1.zip",
+      "exam_id": "2014-07_N1",
+      "archive_bytes": 45071744,
+      "archive_sha256": "5202de398d1cee634b9780fbccdeb0a8398fc13ab0a98fd6034f742a1713fc04",
+      "audio_references": 42,
+      "audio_bytes": 72368575
+    },
+    {
+      "archive": "2014-07_N2.zip",
+      "exam_id": "2014-07_N2",
+      "archive_bytes": 31130832,
+      "archive_sha256": "ca92e6e056b70cbbbb712c281f0b8493f57dbcd29035922a6403c4636e682fd2",
+      "audio_references": 37,
+      "audio_bytes": 43725399
+    },
+    {
+      "archive": "2014-07_N3.zip",
+      "exam_id": "2014-07_N3",
+      "archive_bytes": 36448324,
+      "archive_sha256": "5d36bf258db56f15aeec01a35e6777b064f50e132023bce563d1fad2dc3c4f4c",
+      "audio_references": 34,
+      "audio_bytes": 61029384
+    },
+    {
+      "archive": "2014-07_N4.zip",
+      "exam_id": "2014-07_N4",
+      "archive_bytes": 36563406,
+      "archive_sha256": "fed5681e08d9f22ce30f358e6d9a8ae3d41446bde94c4e9ebffffa0fbdfed80d",
+      "audio_references": 33,
+      "audio_bytes": 67531306
+    },
+    {
+      "archive": "2014-12_N1.zip",
+      "exam_id": "2014-12_N1",
+      "archive_bytes": 45827329,
+      "archive_sha256": "90d2d0549703dea9225047bc1f2e121c6cf988bd9ed2781566ad6299f8f3933a",
+      "audio_references": 42,
+      "audio_bytes": 70438569
+    },
+    {
+      "archive": "2014-12_N2.zip",
+      "exam_id": "2014-12_N2",
+      "archive_bytes": 31929859,
+      "archive_sha256": "1caa5f07d2565219d65ad378433a19066bb2edb277435200e67ca5301d0100eb",
+      "audio_references": 37,
+      "audio_bytes": 45194400
+    },
+    {
+      "archive": "2014-12_N3.zip",
+      "exam_id": "2014-12_N3",
+      "archive_bytes": 35957107,
+      "archive_sha256": "ba6fdd8013b771300a213650a4b18c97b45fab2ce546cdd88f6a5f5d92e6ea84",
+      "audio_references": 34,
+      "audio_bytes": 59386473
+    },
+    {
+      "archive": "2015-07_N1.zip",
+      "exam_id": "2015-07_N1",
+      "archive_bytes": 51198283,
+      "archive_sha256": "11b7a0c70dd4ec21d3bc9ddcbceeb4bf73a19175ec109f2227b4fc40509596ca",
+      "audio_references": 42,
+      "audio_bytes": 77739629
+    },
+    {
+      "archive": "2015-07_N2.zip",
+      "exam_id": "2015-07_N2",
+      "archive_bytes": 40012725,
+      "archive_sha256": "9b469eae0b108965fc4baa1489b40851213d5f0f2ec9f68ffe5d5aeed9781124",
+      "audio_references": 37,
+      "audio_bytes": 61382766
+    },
+    {
+      "archive": "2015-07_N3.zip",
+      "exam_id": "2015-07_N3",
+      "archive_bytes": 43785648,
+      "archive_sha256": "ce39e7c5b239a72442c8a1b52e0a0d2686707d7ca3b3b8dbd180f8f5b475adf0",
+      "audio_references": 29,
+      "audio_bytes": 49768469
+    },
+    {
+      "archive": "2015-12_N1.zip",
+      "exam_id": "2015-12_N1",
+      "archive_bytes": 38658714,
+      "archive_sha256": "e2a5c9c05f878cd2834d94048625d6bc8c402a158b643cda26a4ab729de3f141",
+      "audio_references": 42,
+      "audio_bytes": 53859837
+    },
+    {
+      "archive": "2015-12_N2.zip",
+      "exam_id": "2015-12_N2",
+      "archive_bytes": 38927547,
+      "archive_sha256": "9bb8496fafa742e0a55183aeb61413434cf2986d0ca64b1b3e1428c317b3f690",
+      "audio_references": 37,
+      "audio_bytes": 60380757
+    },
+    {
+      "archive": "2015-12_N3.zip",
+      "exam_id": "2015-12_N3",
+      "archive_bytes": 38056077,
+      "archive_sha256": "522e7c21804811651ce747ad04b51b0e21d99fa76689df836807c9b73377ac10",
+      "audio_references": 34,
+      "audio_bytes": 61533454
+    },
+    {
+      "archive": "2016-07_N1.zip",
+      "exam_id": "2016-07_N1",
+      "archive_bytes": 52945964,
+      "archive_sha256": "d18a6040802e6deeeda9c0802073e52827cec2bf4c5cc73ea0b6ef9b59dde7c2",
+      "audio_references": 42,
+      "audio_bytes": 78520803
+    },
+    {
+      "archive": "2016-07_N2.zip",
+      "exam_id": "2016-07_N2",
+      "archive_bytes": 43132311,
+      "archive_sha256": "1525f571891b18caee363bccbf25e68419921a9e8e49a4eb2e7c267f2252b855",
+      "audio_references": 37,
+      "audio_bytes": 63286023
+    },
+    {
+      "archive": "2016-07_N3.zip",
+      "exam_id": "2016-07_N3",
+      "archive_bytes": 38443222,
+      "archive_sha256": "8711fa04fc9773e0edafa2bfc63dddae53300277be0ca8b66bd25512690c1a34",
+      "audio_references": 34,
+      "audio_bytes": 62820969
+    },
+    {
+      "archive": "2016-12_N1.zip",
+      "exam_id": "2016-12_N1",
+      "archive_bytes": 51828084,
+      "archive_sha256": "9a9fb4dcdc1ab9f971b34789b27606a6f036e2b01b0fe45f1f49e718366ed343",
+      "audio_references": 42,
+      "audio_bytes": 76144353
+    },
+    {
+      "archive": "2016-12_N2.zip",
+      "exam_id": "2016-12_N2",
+      "archive_bytes": 38666308,
+      "archive_sha256": "685d793c5f4aebafd41201689d10dfc03d40ac13398c9dfa6dd46fa516bf3d8f",
+      "audio_references": 37,
+      "audio_bytes": 58201197
+    },
+    {
+      "archive": "2016-12_N3.zip",
+      "exam_id": "2016-12_N3",
+      "archive_bytes": 37326642,
+      "archive_sha256": "38be21e743e0145beec6258f06857eeee9de8bd4327ba6c0a34b8308ba89a7c2",
+      "audio_references": 34,
+      "audio_bytes": 61670895
+    },
+    {
+      "archive": "2017-07_N1.zip",
+      "exam_id": "2017-07_N1",
+      "archive_bytes": 46546155,
+      "archive_sha256": "b98fba28ee4abc93d561a382f9e098da5260f46e36212d33947b77f2c8290c62",
+      "audio_references": 40,
+      "audio_bytes": 71443769
+    },
+    {
+      "archive": "2017-07_N2.zip",
+      "exam_id": "2017-07_N2",
+      "archive_bytes": 51285044,
+      "archive_sha256": "dafd9b7eb646e3449e6e2675fa425f7a973cd97fd32dab79ad1f958d303ca3cf",
+      "audio_references": 37,
+      "audio_bytes": 85018060
+    },
+    {
+      "archive": "2017-07_N3.zip",
+      "exam_id": "2017-07_N3",
+      "archive_bytes": 37147157,
+      "archive_sha256": "91174db60a038ec278700d986beb20ae5e4b06813ff39035f7400435bdf096d8",
+      "audio_references": 34,
+      "audio_bytes": 61869777
+    },
+    {
+      "archive": "2017-07_N4_vietnam.zip",
+      "exam_id": "2017-07_N4",
+      "archive_bytes": 8919534,
+      "archive_sha256": "8ffa74745da125268a14a9f25e2eae0f6d400d30a4cb9fea979587ed8f16db86",
+      "audio_references": 4,
+      "audio_bytes": 11785334
+    },
+    {
+      "archive": "2017-12_N1.zip",
+      "exam_id": "2017-12_N1",
+      "archive_bytes": 37423695,
+      "archive_sha256": "171f618cbc2bc97ee3e87042a49caf3a05c0e393e80ad6cff6b83cd9371e320c",
+      "audio_references": 40,
+      "audio_bytes": 52556448
+    },
+    {
+      "archive": "2017-12_N2.zip",
+      "exam_id": "2017-12_N2",
+      "archive_bytes": 41384843,
+      "archive_sha256": "9a84908f33693b38d695cee580dc4b5094fc97aac201d0e7cd95afcf147ab014",
+      "audio_references": 37,
+      "audio_bytes": 62597643
+    },
+    {
+      "archive": "2017-12_N3.zip",
+      "exam_id": "2017-12_N3",
+      "archive_bytes": 36759284,
+      "archive_sha256": "ffb6759ac088975e7c32abb7f5c09f64aeabd0fcd0b79268a47af7492179f07d",
+      "audio_references": 34,
+      "audio_bytes": 52260084
+    },
+    {
+      "archive": "2018-07_N1.zip",
+      "exam_id": "2018-07_N1",
+      "archive_bytes": 69810698,
+      "archive_sha256": "4543b8c87bd9f350aef5e65156b6ff91745a00a1d6b3e5894b0b2ab1ec0ebc43",
+      "audio_references": 40,
+      "audio_bytes": 96648924
+    },
+    {
+      "archive": "2018-07_N2.zip",
+      "exam_id": "2018-07_N2",
+      "archive_bytes": 48134252,
+      "archive_sha256": "d08ad13cbe7ac87b031427c730313df2a9ad4c695c94424b26fb443774b5ebd8",
+      "audio_references": 35,
+      "audio_bytes": 78750867
+    },
+    {
+      "archive": "2018-07_N3.zip",
+      "exam_id": "2018-07_N3",
+      "archive_bytes": 29530471,
+      "archive_sha256": "4b2192ee138eb05dcfe9e31e7095f27a8e46725dd0f824d3d56c34dc64940309",
+      "audio_references": 34,
+      "audio_bytes": 51626703
+    },
+    {
+      "archive": "2018-07_N4.zip",
+      "exam_id": "2018-07_N4",
+      "archive_bytes": 45812508,
+      "archive_sha256": "e1effc6d9a0b1fedd28a227221e719da6e54c9050cba2fb1bbbec457f8f04f95",
+      "audio_references": 33,
+      "audio_bytes": 63676886
+    },
+    {
+      "archive": "2018-07_N5.zip",
+      "exam_id": "2018-07_N5",
+      "archive_bytes": 29418971,
+      "archive_sha256": "f6e066d6a6c120c5848005423dddc6e4275509cc40d8cedd7a479ef148b6e85d",
+      "audio_references": 29,
+      "audio_bytes": 50593096
+    },
+    {
+      "archive": "2018-12_N1.zip",
+      "exam_id": "2018-12_N1",
+      "archive_bytes": 56547003,
+      "archive_sha256": "027120fa071b07c89b8299eabf24f9ad85ba0b82ac0d98bad2a683413c5a6919",
+      "audio_references": 40,
+      "audio_bytes": 97322554
+    },
+    {
+      "archive": "2018-12_N2.zip",
+      "exam_id": "2018-12_N2",
+      "archive_bytes": 53200792,
+      "archive_sha256": "0657e4ea8c10e2f5b6bbadca87baa99f272d50bfe3b267ff638a1b7852748c27",
+      "audio_references": 35,
+      "audio_bytes": 80199926
+    },
+    {
+      "archive": "2018-12_N3.zip",
+      "exam_id": "2018-12_N3",
+      "archive_bytes": 39367310,
+      "archive_sha256": "cc5f867fa58599fd79edf26e4dce3b4a0a9522505922f2516d161b2fc3e9fb02",
+      "audio_references": 34,
+      "audio_bytes": 71701218
+    },
+    {
+      "archive": "2018-12_N4_vietnam.zip",
+      "exam_id": "2018-12_N4",
+      "archive_bytes": 16613020,
+      "archive_sha256": "2b31a4a3aed0cd2d9acb4df7b57377ffbb770f683f1a002e7a5646603fcb07ae",
+      "audio_references": 4,
+      "audio_bytes": 19369399
+    },
+    {
+      "archive": "2019-07_N1.zip",
+      "exam_id": "2019-07_N1",
+      "archive_bytes": 69514591,
+      "archive_sha256": "8aeefbc930997cdbe4fb03a74309b65781a342160d2318d23e72a6668557564f",
+      "audio_references": 40,
+      "audio_bytes": 95275232
+    },
+    {
+      "archive": "2019-07_N2.zip",
+      "exam_id": "2019-07_N2",
+      "archive_bytes": 48615443,
+      "archive_sha256": "7489a96a62ca346851a96741d9c3cba3e69d7be22a10d4885b8c2b159dd56439",
+      "audio_references": 35,
+      "audio_bytes": 85122791
+    },
+    {
+      "archive": "2019-07_N3.zip",
+      "exam_id": "2019-07_N3",
+      "archive_bytes": 28304712,
+      "archive_sha256": "428860c6546c6408da8057046b847823a1873b20e3251a779b0610196fe1fc30",
+      "audio_references": 34,
+      "audio_bytes": 46156275
+    },
+    {
+      "archive": "2019-12_N1.zip",
+      "exam_id": "2019-12_N1",
+      "archive_bytes": 67438498,
+      "archive_sha256": "be4f9586f5c18761b1671105dcf8a383b63c2b25fa2007ef5f997a4e8e4bd75b",
+      "audio_references": 40,
+      "audio_bytes": 101442832
+    },
+    {
+      "archive": "2019-12_N2.zip",
+      "exam_id": "2019-12_N2",
+      "archive_bytes": 66176732,
+      "archive_sha256": "91a1e81bc6413a3391240e81be218972429656515cf1ec63653dd643c78086db",
+      "audio_references": 35,
+      "audio_bytes": 85950452
+    },
+    {
+      "archive": "2019-12_N3.zip",
+      "exam_id": "2019-12_N3",
+      "archive_bytes": 47494949,
+      "archive_sha256": "89654e3ed8c85f3c1e31549d063641fa61c1c483aab7bba1aed4304bc860754a",
+      "audio_references": 34,
+      "audio_bytes": 79418433
+    },
+    {
+      "archive": "2020-12_N1.zip",
+      "exam_id": "2020-12_N1",
+      "archive_bytes": 76141565,
+      "archive_sha256": "4e33629d870b3febc708916a3db5e288192c3471f359611721bcb85d7e9601e7",
+      "audio_references": 35,
+      "audio_bytes": 93817882
+    },
+    {
+      "archive": "2020-12_N2.zip",
+      "exam_id": "2020-12_N2",
+      "archive_bytes": 38254621,
+      "archive_sha256": "532d943a315b43cc0fa3e011f07e23b95135c9b0af840e6ebf17a0e2a8bde718",
+      "audio_references": 35,
+      "audio_bytes": 55950071
+    },
+    {
+      "archive": "2021-07_N1.zip",
+      "exam_id": "2021-07_N1",
+      "archive_bytes": 53778923,
+      "archive_sha256": "2e4c650110cfa1dac72bd553907524426153b44e2dc35d11fa09dcc30f58d558",
+      "audio_references": 35,
+      "audio_bytes": 95254318
+    },
+    {
+      "archive": "2021-07_N2.zip",
+      "exam_id": "2021-07_N2",
+      "archive_bytes": 51034415,
+      "archive_sha256": "31796735bd2d08a6af085bbe2da1c6c9f8c81712b7978975bf09c2d4f2c2d745",
+      "audio_references": 30,
+      "audio_bytes": 60295941
+    },
+    {
+      "archive": "2021-12_N1.zip",
+      "exam_id": "2021-12_N1",
+      "archive_bytes": 39164235,
+      "archive_sha256": "c997c44a3159f5247c49f5b737a87329717cae812ea24c4a05d03753ee00c331",
+      "audio_references": 35,
+      "audio_bytes": 54990429
+    },
+    {
+      "archive": "2021-12_N2.zip",
+      "exam_id": "2021-12_N2",
+      "archive_bytes": 44046870,
+      "archive_sha256": "bc0a7586e5b269085c6e3119a6f0e5a17e5dcf3ccf0ac74af5b6e99d18ea599f",
+      "audio_references": 30,
+      "audio_bytes": 81082686
+    },
+    {
+      "archive": "2022-07_N1.zip",
+      "exam_id": "2022-07_N1",
+      "archive_bytes": 62466744,
+      "archive_sha256": "1e215b9b3745654c2a06d744efd640451166da737b3f90a4efd2f5888441391c",
+      "audio_references": 35,
+      "audio_bytes": 94044524
+    },
+    {
+      "archive": "2022-07_N2.zip",
+      "exam_id": "2022-07_N2",
+      "archive_bytes": 49257624,
+      "archive_sha256": "2cc0bfd83c63e3214e573887bfe1116548452d3a48ac15d93201c4c48fa4cdf0",
+      "audio_references": 30,
+      "audio_bytes": 77209557
+    },
+    {
+      "archive": "2022-07_N3.zip",
+      "exam_id": "2022-07_N3",
+      "archive_bytes": 28292052,
+      "archive_sha256": "1d136aeb7b08c2d800fed51febc154faf02151a9fc1f80bbe93d2b0c6cdb0183",
+      "audio_references": 29,
+      "audio_bytes": 32898581
+    },
+    {
+      "archive": "2022-12_N1.zip",
+      "exam_id": "2022-12_N1",
+      "archive_bytes": 76841820,
+      "archive_sha256": "67b9650b8e4e0e78244366aefb7c75228c09c3bab5c99b425fad13222d01cadd",
+      "audio_references": 30,
+      "audio_bytes": 79497884
+    },
+    {
+      "archive": "2022-12_N2.zip",
+      "exam_id": "2022-12_N2",
+      "archive_bytes": 52767879,
+      "archive_sha256": "7fc13d952585c7ff72dcb3d628a97fff0734e76e67aace04d3aff2940c130f10",
+      "audio_references": 30,
+      "audio_bytes": 58344136
+    },
+    {
+      "archive": "2022-12_N3.zip",
+      "exam_id": "2022-12_N3",
+      "archive_bytes": 61329960,
+      "archive_sha256": "ff93af11bded397cdcf6381535509710306abaac76f9337e0815ab870768b859",
+      "audio_references": 29,
+      "audio_bytes": 63555250
+    },
+    {
+      "archive": "2023-07_N1.zip",
+      "exam_id": "2023-07_N1",
+      "archive_bytes": 74697028,
+      "archive_sha256": "265c130f4b6207a412a4adffeac2bb4bb077f2b6dbd950e53ece7a47eb7ccc04",
+      "audio_references": 30,
+      "audio_bytes": 79170219
+    },
+    {
+      "archive": "2023-07_N2.zip",
+      "exam_id": "2023-07_N2",
+      "archive_bytes": 73729313,
+      "archive_sha256": "d6430a3bac65bbee8a49889dfed69b71ee63bbc2cff6f7dcc7c35e8ec70a5fff",
+      "audio_references": 30,
+      "audio_bytes": 76391612
+    },
+    {
+      "archive": "2023-07_N3.zip",
+      "exam_id": "2023-07_N3",
+      "archive_bytes": 60860626,
+      "archive_sha256": "aa95b61c92e4432a1a918162a1769bf6398dd801ed54ff9345a8ade5aec37de8",
+      "audio_references": 29,
+      "audio_bytes": 64842567
+    },
+    {
+      "archive": "2023-12_N1.zip",
+      "exam_id": "2023-12_N1",
+      "archive_bytes": 77264538,
+      "archive_sha256": "fa6f6a7bbb3fdac39515539bb5408a281ad0f42bb77583d56462d65691780ad7",
+      "audio_references": 30,
+      "audio_bytes": 84134722
+    },
+    {
+      "archive": "2023-12_N2.zip",
+      "exam_id": "2023-12_N2",
+      "archive_bytes": 53295128,
+      "archive_sha256": "99f0d044b968254bad7d06d45d5b02e71cbd941ef697aee9e38f7b3109e086c0",
+      "audio_references": 30,
+      "audio_bytes": 82715749
+    },
+    {
+      "archive": "2023-12_N3.zip",
+      "exam_id": "2023-12_N3",
+      "archive_bytes": 41286408,
+      "archive_sha256": "228cdc4dd1eb16fd8269be2a984e160674966ef35f37dcb4598b0a965533cf76",
+      "audio_references": 29,
+      "audio_bytes": 73037071
+    },
+    {
+      "archive": "2024-07_N1.zip",
+      "exam_id": "2024-07_N1",
+      "archive_bytes": 58178439,
+      "archive_sha256": "8f51e77d5428ebdff8fb0f57f8b1889cf5a09333c3e6c5cb8794094e6ff8fcb3",
+      "audio_references": 30,
+      "audio_bytes": 72552608
+    },
+    {
+      "archive": "2024-07_N2.zip",
+      "exam_id": "2024-07_N2",
+      "archive_bytes": 36809569,
+      "archive_sha256": "fe804002156fb6ed15efc487e5c28097b4ff0f7c24d23ff1e9740936063e836d",
+      "audio_references": 30,
+      "audio_bytes": 58633570
+    },
+    {
+      "archive": "2024-07_N3.zip",
+      "exam_id": "2024-07_N3",
+      "archive_bytes": 44661221,
+      "archive_sha256": "b92e781f7a6e0f9b1ee21d2815c3013767e42d6d04afb1ced49b7f87eb55159d",
+      "audio_references": 29,
+      "audio_bytes": 61624954
+    },
+    {
+      "archive": "2024-07_N4_vietnam.zip",
+      "exam_id": "2024-07_N4",
+      "archive_bytes": 10287878,
+      "archive_sha256": "796d6472cd220a5653d5994b897d59ade428adeaef50043998e4ae5e82976d11",
+      "audio_references": 4,
+      "audio_bytes": 12656288
+    },
+    {
+      "archive": "2024-12_N1.zip",
+      "exam_id": "2024-12_N1",
+      "archive_bytes": 70866762,
+      "archive_sha256": "860eef033c701bfa9eefabd6402d7e81734101df9707e9729db45a685518746b",
+      "audio_references": 30,
+      "audio_bytes": 100226304
+    },
+    {
+      "archive": "2024-12_N2.zip",
+      "exam_id": "2024-12_N2",
+      "archive_bytes": 55116353,
+      "archive_sha256": "1206808873b3e89a98ab40b0a017139eaf8c5d58663b82e513ceb3760a8d0c8b",
+      "audio_references": 30,
+      "audio_bytes": 86956991
+    },
+    {
+      "archive": "2024-12_N3.zip",
+      "exam_id": "2024-12_N3",
+      "archive_bytes": 66583586,
+      "archive_sha256": "c8964e5905a4c0e224c75fb4e9b523e0af204d83504ff40acf40d80177bcd67e",
+      "audio_references": 29,
+      "audio_bytes": 91963727
+    },
+    {
+      "archive": "2025-07_N1.zip",
+      "exam_id": "2025-07_N1",
+      "archive_bytes": 45330472,
+      "archive_sha256": "c64b4c2edc84313d03bdca0d00f10520aca65f7ac895ef37a3afb51364c6db6a",
+      "audio_references": 30,
+      "audio_bytes": 66820673
+    },
+    {
+      "archive": "2025-07_N2.zip",
+      "exam_id": "2025-07_N2",
+      "archive_bytes": 69541312,
+      "archive_sha256": "a3eb7c86e658523261a06490621304f063ecad5d6c684bf280e4c3213e22f1db",
+      "audio_references": 30,
+      "audio_bytes": 98213052
+    },
+    {
+      "archive": "2025-07_N3_vietnam.zip",
+      "exam_id": "2025-07_N3",
+      "archive_bytes": 9162518,
+      "archive_sha256": "5303ab1709f368fa19dc78c5a2292c84681f36f8ee69420dffa676c45f0061bb",
+      "audio_references": 5,
+      "audio_bytes": 12030937
+    },
+    {
+      "archive": "2025-12_N1.zip",
+      "exam_id": "2025-12_N1",
+      "archive_bytes": 43004088,
+      "archive_sha256": "1f2c4ec4b3b5d7c8bc879eacf3a9a9ac8b942ad2942123491c586626d78be3a5",
+      "audio_references": 30,
+      "audio_bytes": 51897096
+    },
+    {
+      "archive": "2025-12_N2.zip",
+      "exam_id": "2025-12_N2",
+      "archive_bytes": 44486537,
+      "archive_sha256": "3a832f98206b06d39889128c5afbe7e3e2f65e17ae72c31280b3ad5ac23a788f",
+      "audio_references": 30,
+      "audio_bytes": 52877706
+    },
+    {
+      "archive": "2025-12_N3.zip",
+      "exam_id": "2025-12_N3",
+      "archive_bytes": 27085789,
+      "archive_sha256": "1c3d7332245a206b76f12d1206aad973203e20dc0c7e6f803e9f8b6f8069da21",
+      "audio_references": 29,
+      "audio_bytes": 34002936
+    }
+  ]
+}
