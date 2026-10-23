@@ -1,4 +1,4 @@
-name: Build N2Memory V25 APK
+name: Build N2Memory V26 APK
 
 on:
   workflow_dispatch:
@@ -6,6 +6,7 @@ on:
     branches: [ main ]
     paths:
       - 'ci/source_parts/**'
+      - 'ci/patches/v26-ui.patch'
       - '.github/workflows/build-v25-apk.yml'
 
 permissions:
@@ -29,14 +30,16 @@ jobs:
           "$SDKMANAGER" "platforms;android-35" "build-tools;35.0.0"
           test -f "$ANDROID_HOME/platforms/android-35/android.jar"
           test -x "$ANDROID_HOME/build-tools/35.0.0/aapt2"
-      - name: Restore and verify V25 source
+      - name: Restore V25 source and apply V26 upgrade
         shell: bash
         run: |
           cat ci/source_parts/source.zip.part-* > /tmp/N2Memory_Android_V25_source.zip
           echo "1e1e26553bf2d7469c9bbecf73bc4e0994d397a8814910f64855b1a6f03fc0f9  /tmp/N2Memory_Android_V25_source.zip" | sha256sum -c -
           mkdir source
           unzip -q /tmp/N2Memory_Android_V25_source.zip -d source
-      - name: Run V25 regression tests
+          git apply --directory=source ci/patches/v26-ui.patch
+          python3 -c "from pathlib import Path; Path('source/app/src/main/assets/book_mimetic_300.pdf').unlink(missing_ok=True)"
+      - name: Run V26 regression tests
         working-directory: source
         run: |
           python3 tests/host/run_tests.py
@@ -44,17 +47,19 @@ jobs:
           python3 tests/test_v23_learning_cards.py
           python3 tests/test_v24_exam_training.py
           python3 tests/test_v25_notebook_audio.py
+          python3 tests/test_v26_navigation_voice.py
+          python3 tests/test_v26_product_ui.py
       - name: Build and verify signed APK
         working-directory: source
         run: python3 scripts/build_sdk.py
       - name: Collect APK
         run: |
           mkdir apk
-          cp source/build/direct-sdk/N2Memory_Android_0.25.0_test.apk apk/N2Memory_Android_V25_test.apk
-          sha256sum apk/N2Memory_Android_V25_test.apk | tee apk/SHA256SUMS.txt
+          cp source/build/direct-sdk/N2Memory_Android_0.26.0_test.apk apk/N2Memory_Android_V26_test.apk
+          sha256sum apk/N2Memory_Android_V26_test.apk | tee apk/SHA256SUMS.txt
       - uses: actions/upload-artifact@v4
         with:
-          name: N2Memory-Android-V25-APK
+          name: N2Memory-Android-V26-APK
           path: apk/
           if-no-files-found: error
           retention-days: 30
