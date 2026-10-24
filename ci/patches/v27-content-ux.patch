@@ -1,0 +1,989 @@
+diff --git a/app/build.gradle b/app/build.gradle
+index cd8eca3af37e11dc211e16c43c67aab140729bc3..a8a304dfcc589e6993c116c8208db062cae247ac 100644
+--- a/app/build.gradle
++++ b/app/build.gradle
+@@ -7,7 +7,7 @@ android {
+         applicationId 'jp.personal.n2memory.android'
+         minSdk 26
+         targetSdk 35
+-        versionCode 26
+-        versionName '0.26.0'
++        versionCode 27
++        versionName '0.27.0'
+     }
+ }
+diff --git a/app/src/main/assets/keigo_samples.json b/app/src/main/assets/keigo_samples.json
+index e46e2281b83bdeaa8bdedeb55b185d2930cb6d50..002d0055d0d0b30df2684e96d76e488bae70a0aa 100644
+--- a/app/src/main/assets/keigo_samples.json
++++ b/app/src/main/assets/keigo_samples.json
+@@ -193,5 +193,577 @@
+     "situation": "谈论自己喜欢做饭。",
+     "example": "お料理が好きです。",
+     "caution": "本例是美化表达；分类需看具体语境。"
++  },
++  {
++    "id": "keigo-v27-16",
++    "base": "する",
++    "expression": "なさる",
++    "reading": "なさる",
++    "type": "尊敬语",
++    "actor": "对方／尊敬对象",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "社長は説明をなさいました。",
++    "caution": "尊敬对方的动作；ます形为なさいます。"
++  },
++  {
++    "id": "keigo-v27-17",
++    "base": "くれる",
++    "expression": "くださる",
++    "reading": "くださる",
++    "type": "尊敬语",
++    "actor": "对方／尊敬对象",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "先生が資料をくださいました。",
++    "caution": "动作主体是对方；ます形为くださいます。"
++  },
++  {
++    "id": "keigo-v27-18",
++    "base": "知っている",
++    "expression": "ご存じだ",
++    "reading": "ごぞんじだ",
++    "type": "尊敬语",
++    "actor": "对方／尊敬对象",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "この件をご存じですか。",
++    "caution": "不能写成「ご存じている」。"
++  },
++  {
++    "id": "keigo-v27-19",
++    "base": "寝る",
++    "expression": "お休みになる",
++    "reading": "おやすみになる",
++    "type": "尊敬语",
++    "actor": "对方／尊敬对象",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "先生はもうお休みになりました。",
++    "caution": "「休む」也可能表示休假，须结合语境。"
++  },
++  {
++    "id": "keigo-v27-20",
++    "base": "着る",
++    "expression": "お召しになる",
++    "reading": "おめしになる",
++    "type": "尊敬语",
++    "actor": "对方／尊敬对象",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "すてきなスーツをお召しですね。",
++    "caution": "用于衣着；不要与「召し上がる」混淆。"
++  },
++  {
++    "id": "keigo-v27-21",
++    "base": "来る",
++    "expression": "お越しになる",
++    "reading": "おこしになる",
++    "type": "尊敬语",
++    "actor": "对方／尊敬对象",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "明日は何時にお越しになりますか。",
++    "caution": "正式场合常用。"
++  },
++  {
++    "id": "keigo-v27-22",
++    "base": "来る",
++    "expression": "お見えになる",
++    "reading": "おみえになる",
++    "type": "尊敬语",
++    "actor": "对方／尊敬对象",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "部長がお見えになりました。",
++    "caution": "表示尊敬对象来到现场。"
++  },
++  {
++    "id": "keigo-v27-23",
++    "base": "动词",
++    "expression": "お〜になる",
++    "reading": "お〜になる",
++    "type": "尊敬语",
++    "actor": "对方／尊敬对象",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "こちらでお待ちになりますか。",
++    "caution": "通常接和语动词ます形；不是所有动词都自然。"
++  },
++  {
++    "id": "keigo-v27-24",
++    "base": "サ变动词",
++    "expression": "ご〜になる",
++    "reading": "ご〜になる",
++    "type": "尊敬语",
++    "actor": "对方／尊敬对象",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "先生がご説明になりました。",
++    "caution": "通常接汉语词サ变动词。"
++  },
++  {
++    "id": "keigo-v27-25",
++    "base": "动词",
++    "expression": "お〜ください",
++    "reading": "お〜ください",
++    "type": "尊敬语",
++    "actor": "对方／尊敬对象",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "少々お待ちください。",
++    "caution": "尊敬形式的请求表达。"
++  },
++  {
++    "id": "keigo-v27-26",
++    "base": "サ变动词",
++    "expression": "ご〜ください",
++    "reading": "ご〜ください",
++    "type": "尊敬语",
++    "actor": "对方／尊敬对象",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "こちらにご記入ください。",
++    "caution": "通常接汉语词サ变动词词干。"
++  },
++  {
++    "id": "keigo-v27-27",
++    "base": "読む",
++    "expression": "お読みになる",
++    "reading": "およみになる",
++    "type": "尊敬语",
++    "actor": "对方／尊敬对象",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "この資料をお読みになりましたか。",
++    "caution": "比尊敬助动词「読まれる」更明确。"
++  },
++  {
++    "id": "keigo-v27-28",
++    "base": "会う",
++    "expression": "お目にかかる",
++    "reading": "おめにかかる",
++    "type": "谦让语Ⅰ",
++    "actor": "自己／己方",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "先生にお目にかかれて光栄です。",
++    "caution": "降低自己，抬高会面的对象。"
++  },
++  {
++    "id": "keigo-v27-29",
++    "base": "もらう・食べる・飲む",
++    "expression": "いただく",
++    "reading": "いただく",
++    "type": "谦让语Ⅰ",
++    "actor": "自己／己方",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "先生から本をいただきました。",
++    "caution": "用于从尊敬对象处接受；吃喝时也可使用。"
++  },
++  {
++    "id": "keigo-v27-30",
++    "base": "あげる",
++    "expression": "差し上げる",
++    "reading": "さしあげる",
++    "type": "谦让语Ⅰ",
++    "actor": "自己／己方",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "私から先生にご連絡を差し上げます。",
++    "caution": "不能对上级说成施恩语气，需注意场景。"
++  },
++  {
++    "id": "keigo-v27-31",
++    "base": "借りる",
++    "expression": "拝借する",
++    "reading": "はいしゃくする",
++    "type": "谦让语Ⅰ",
++    "actor": "自己／己方",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "資料を拝借してもよろしいでしょうか。",
++    "caution": "正式表达。"
++  },
++  {
++    "id": "keigo-v27-32",
++    "base": "読む",
++    "expression": "拝読する",
++    "reading": "はいどくする",
++    "type": "谦让语Ⅰ",
++    "actor": "自己／己方",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "先生の論文を拝読しました。",
++    "caution": "阅读尊敬对象的文章或来信。"
++  },
++  {
++    "id": "keigo-v27-33",
++    "base": "受け取る",
++    "expression": "拝受する",
++    "reading": "はいじゅする",
++    "type": "谦让语Ⅰ",
++    "actor": "自己／己方",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "メールを拝受しました。",
++    "caution": "商务书面语。"
++  },
++  {
++    "id": "keigo-v27-34",
++    "base": "知っている",
++    "expression": "存じ上げる",
++    "reading": "ぞんじあげる",
++    "type": "谦让语Ⅰ",
++    "actor": "自己／己方",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "田中先生を存じ上げております。",
++    "caution": "多用于认识某人；知道事情常用「存じる」。"
++  },
++  {
++    "id": "keigo-v27-35",
++    "base": "承知する",
++    "expression": "承る",
++    "reading": "うけたまわる",
++    "type": "谦让语Ⅰ",
++    "actor": "自己／己方",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "ご注文を承りました。",
++    "caution": "可表示恭敬地听取或接受。"
++  },
++  {
++    "id": "keigo-v27-36",
++    "base": "接受・明白",
++    "expression": "かしこまる",
++    "reading": "かしこまる",
++    "type": "谦让语Ⅰ",
++    "actor": "自己／己方",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "かしこまりました。",
++    "caution": "服务场景表示郑重接受。"
++  },
++  {
++    "id": "keigo-v27-37",
++    "base": "动词",
++    "expression": "お〜する",
++    "reading": "お〜する",
++    "type": "谦让语Ⅰ",
++    "actor": "自己／己方",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "荷物をお持ちします。",
++    "caution": "自己为尊敬对象做某事。"
++  },
++  {
++    "id": "keigo-v27-38",
++    "base": "サ变动词",
++    "expression": "ご〜する",
++    "reading": "ご〜する",
++    "type": "谦让语Ⅰ",
++    "actor": "自己／己方",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "会場までご案内します。",
++    "caution": "通常接汉语词サ变动词词干。"
++  },
++  {
++    "id": "keigo-v27-39",
++    "base": "动词",
++    "expression": "お〜いたす",
++    "reading": "お〜いたす",
++    "type": "谦让语Ⅰ",
++    "actor": "自己／己方",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "後ほどお電話いたします。",
++    "caution": "比「お〜する」更郑重。"
++  },
++  {
++    "id": "keigo-v27-40",
++    "base": "サ变动词",
++    "expression": "ご〜いたす",
++    "reading": "ご〜いたす",
++    "type": "谦让语Ⅰ",
++    "actor": "自己／己方",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "改めてご連絡いたします。",
++    "caution": "商务场景常用。"
++  },
++  {
++    "id": "keigo-v27-41",
++    "base": "いる",
++    "expression": "おる",
++    "reading": "おる",
++    "type": "谦让语Ⅱ（丁重语）",
++    "actor": "自己／己方",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "私は受付におります。",
++    "caution": "郑重叙述己方存在，不直接抬高对象。"
++  },
++  {
++    "id": "keigo-v27-42",
++    "base": "ある",
++    "expression": "ござる",
++    "reading": "ござる",
++    "type": "谦让语Ⅱ（丁重语）",
++    "actor": "自己／己方",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "資料はこちらにございます。",
++    "caution": "现代通常以「ございます」出现。"
++  },
++  {
++    "id": "keigo-v27-43",
++    "base": "思う・知る",
++    "expression": "存じる",
++    "reading": "ぞんじる",
++    "type": "谦让语Ⅱ（丁重语）",
++    "actor": "自己／己方",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "そのように存じます。",
++    "caution": "郑重叙述自己的认识或想法。"
++  },
++  {
++    "id": "keigo-v27-44",
++    "base": "来る",
++    "expression": "参上する",
++    "reading": "さんじょうする",
++    "type": "谦让语Ⅰ",
++    "actor": "自己／己方",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "明日こちらから参上します。",
++    "caution": "表示到尊敬对象处去，较正式。"
++  },
++  {
++    "id": "keigo-v27-45",
++    "base": "です",
++    "expression": "でございます",
++    "reading": "でございます",
++    "type": "丁宁语",
++    "actor": "说话人",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "こちらが申込書でございます。",
++    "caution": "比「です」更郑重。"
++  },
++  {
++    "id": "keigo-v27-46",
++    "base": "あります",
++    "expression": "ございます",
++    "reading": "ございます",
++    "type": "丁宁语",
++    "actor": "说话人",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "在庫がございます。",
++    "caution": "「ある」的郑重表达。"
++  },
++  {
++    "id": "keigo-v27-47",
++    "base": "ない",
++    "expression": "ございません",
++    "reading": "ございません",
++    "type": "丁宁语",
++    "actor": "说话人",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "問題はございません。",
++    "caution": "正式否定表达。"
++  },
++  {
++    "id": "keigo-v27-48",
++    "base": "名前",
++    "expression": "お名前",
++    "reading": "おなまえ",
++    "type": "美化语",
++    "actor": "说话人",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "お名前をお願いします。",
++    "caution": "也含对对方事物的礼貌。"
++  },
++  {
++    "id": "keigo-v27-49",
++    "base": "金",
++    "expression": "お金",
++    "reading": "おかね",
++    "type": "美化语",
++    "actor": "说话人",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "お金を払います。",
++    "caution": "惯用美化语。"
++  },
++  {
++    "id": "keigo-v27-50",
++    "base": "茶",
++    "expression": "お茶",
++    "reading": "おちゃ",
++    "type": "美化语",
++    "actor": "说话人",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "お茶をどうぞ。",
++    "caution": "惯用美化语。"
++  },
++  {
++    "id": "keigo-v27-51",
++    "base": "米",
++    "expression": "お米",
++    "reading": "おこめ",
++    "type": "美化语",
++    "actor": "说话人",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "お米を買いました。",
++    "caution": "惯用美化语。"
++  },
++  {
++    "id": "keigo-v27-52",
++    "base": "住所",
++    "expression": "ご住所",
++    "reading": "ごじゅうしょ",
++    "type": "美化语",
++    "actor": "说话人",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "ご住所をご記入ください。",
++    "caution": "通常对汉语词加「ご」。"
++  },
++  {
++    "id": "keigo-v27-53",
++    "base": "待たせた",
++    "expression": "お待たせいたしました",
++    "reading": "おまたせいたしました",
++    "type": "商务固定表达",
++    "actor": "说话人",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "大変お待たせいたしました。",
++    "caution": "向顾客或对方郑重致歉。"
++  },
++  {
++    "id": "keigo-v27-54",
++    "base": "对不起",
++    "expression": "申し訳ございません",
++    "reading": "もうしわけございません",
++    "type": "商务固定表达",
++    "actor": "说话人",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "ご迷惑をおかけし、申し訳ございません。",
++    "caution": "正式道歉；不能只靠敬语替代具体说明。"
++  },
++  {
++    "id": "keigo-v27-55",
++    "base": "麻烦您",
++    "expression": "恐れ入ります",
++    "reading": "おそれいります",
++    "type": "商务固定表达",
++    "actor": "说话人",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "恐れ入りますが、もう一度お願いします。",
++    "caution": "请求前缓和语气，也可表示感谢。"
++  },
++  {
++    "id": "keigo-v27-56",
++    "base": "承蒙关照",
++    "expression": "お世話になっております",
++    "reading": "おせわになっております",
++    "type": "商务固定表达",
++    "actor": "说话人",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "いつもお世話になっております。",
++    "caution": "商务邮件和电话常用开场。"
++  },
++  {
++    "id": "keigo-v27-57",
++    "base": "拜托了",
++    "expression": "よろしくお願いいたします",
++    "reading": "よろしくおねがいいたします",
++    "type": "商务固定表达",
++    "actor": "说话人",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "ご確認のほど、よろしくお願いいたします。",
++    "caution": "用于请求、合作或收尾。"
++  },
++  {
++    "id": "keigo-v27-58",
++    "base": "失礼",
++    "expression": "失礼いたします",
++    "reading": "しつれいいたします",
++    "type": "商务固定表达",
++    "actor": "说话人",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "それでは、失礼いたします。",
++    "caution": "进入、离开、挂电话等场景。"
++  },
++  {
++    "id": "keigo-v27-59",
++    "base": "请稍等",
++    "expression": "少々お待ちくださいませ",
++    "reading": "しょうしょうおまちくださいませ",
++    "type": "商务固定表达",
++    "actor": "说话人",
++    "target": "根据具体语境判断",
++    "listener": "顾客／上级／正式场合",
++    "situation": "常用敬语与正式场合表达。",
++    "example": "確認いたしますので、少々お待ちくださいませ。",
++    "caution": "服务用语；「ませ」增加礼貌但不宜滥用。"
+   }
+-]
+\ No newline at end of file
++]
+diff --git a/app/src/main/java/jp/personal/n2memory/MainActivity.java b/app/src/main/java/jp/personal/n2memory/MainActivity.java
+index 094608e6d5a88aaf3b07eace9391b4e08b319e16..ff24a56f0d998df2c0096aa1207c66cd21338358 100644
+--- a/app/src/main/java/jp/personal/n2memory/MainActivity.java
++++ b/app/src/main/java/jp/personal/n2memory/MainActivity.java
+@@ -65,7 +65,7 @@ public class MainActivity extends Activity {
+         wordScope=getPreferences(0).getString("word_scope","优先分级词表");grammarScope=getPreferences(0).getString("grammar_scope","优先分级语法");
+         wordLevel=getPreferences(0).getString("word_level","全部").replace("N2＋N1","N2,N1").replace("N4＋N5","N4,N5");grammarLevel=getPreferences(0).getString("grammar_level","全部").replace("＋",",");examLevels=getPreferences(0).getString("exam_levels","N2").replace("＋",",");
+         customLevel=getPreferences(0).getString("custom_exam_levels",examLevels).replace("＋",",");customCategory=getPreferences(0).getString("custom_exam_category","全部题型");customCount=getPreferences(0).getInt("custom_exam_count",20);customMode=getPreferences(0).getString("custom_exam_mode","专项练习");
+-        if(!getPreferences(0).getBoolean("v15_focus_applied",false)){wordLevel="N2,N1";wordScope="核心优先＋补充";getPreferences(0).edit().putBoolean("v15_focus_applied",true).putString("word_level",wordLevel).putString("word_scope",wordScope).apply();}
++        if(!getPreferences(0).getBoolean("v27_core_scope_applied",false)){wordLevel="N2,N1";wordScope="优先分级词表";getPreferences(0).edit().putBoolean("v27_core_scope_applied",true).putString("word_level",wordLevel).putString("word_scope",wordScope).apply();}
+         detailRepository=new DetailRepository(this);speech=new SpeechController(this);offlineMaster=new OfflineMasterRepository(this);v9=new V9Repository(this);examMedia=new ExamMedia(this);exampleRepository=new ExampleRepository(path->getAssets().open(path));
+         root=new LinearLayout(this);root.setOrientation(LinearLayout.VERTICAL);root.setBackgroundColor(Color.rgb(245,248,248));root.setFitsSystemWindows(true);setContentView(root);
+         // Respect status/navigation bars when targeting Android 15 edge-to-edge.
+@@ -99,7 +99,7 @@ public class MainActivity extends Activity {
+             return (JSONArray)result;
+         }
+     }
+-    private void loadCatalog(){screen("N2记忆");text("V26 正在载入学习列表…",18);text("核心词汇、语法、真题训练、错题分类与声音缓存资料已内置；扩展词典按需导入。",14);worker.execute(()->{
++    private void loadCatalog(){screen("N2记忆");text("V27 正在载入学习列表…",18);text("核心词汇、语法、真题训练、错题分类与声音缓存资料已内置；扩展词典按需导入。",14);worker.execute(()->{
+         try {ChineseText.initialize(getAssets().open("chinese_search_map.json"));JSONArray w=load("vocabulary"),g=load("grammar"),e=load("exams"),k=load("kanji"),v=load("verb_samples"),h=load("keigo_samples");
+             if(lexical!=null)lexical.close();lexical=new LexicalRepository(this);
+             store.migrateWordAliases(w);store.migrateWordAliases(grammarMigrationCards(g));applyEdits(w);applyEdits(g);applyEdits(e);applyEdits(k);
+@@ -133,13 +133,14 @@ public class MainActivity extends Activity {
+         LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(dp(96),-2);lp.setMargins(dp(8),0,0,0);line.addView(mark,lp);body.addView(line,new LinearLayout.LayoutParams(-1,-2));
+         TextView badge=text("  "+(level==null||level.isEmpty()?"未标级":level)+"  ",14);badge.setTextColor(Color.rgb(15,118,110));badge.setTypeface(null,android.graphics.Typeface.BOLD);badge.setBackground(rounded(Color.rgb(228,244,240)));LinearLayout.LayoutParams badgeLp=new LinearLayout.LayoutParams(-2,-2);badgeLp.setMargins(0,dp(10),0,dp(14));badge.setLayoutParams(badgeLp);
+     }
+-    private void wordScopeChoice(Runnable back){String[] scopes={"核心优先＋补充","优先分级词表","补充词库","Anki词表","全部词卡","300拟声词书","拟声拟态词典"};choose("学习资料",scopes,Arrays.asList(scopes).indexOf(wordScope),i->{wordScope=scopes[i];getPreferences(0).edit().putString("word_scope",wordScope).apply();batchIds.clear();wordIndex=0;revealed=false;back.run();});}
++    private void wordScopeChoice(Runnable back){String[] scopes={"优先分级词表","补充词库","Anki词表","全部词卡","300拟声词书","拟声拟态词典"};choose("词汇来源（默认OKJLPT 6006主词库）",scopes,Math.max(0,Arrays.asList(scopes).indexOf(wordScope)),i->{wordScope=scopes[i];getPreferences(0).edit().putString("word_scope",wordScope).apply();batchIds.clear();wordIndex=0;revealed=false;back.run();});}
+     private void wordStateChoice(Runnable back){String[] states={"未学","已学未掌握","全部（含已掌握）"};choose("学习状态",states,Arrays.asList(states).indexOf(wordStudyState),i->{wordStudyState=states[i];hideMastered=i!=2;batchIds.clear();wordIndex=0;revealed=false;back.run();});}
+     private void grammarFilters(){
+         String[] scopes={"优先分级语法","全部语法"};choose("学习资料",scopes,Arrays.asList(scopes).indexOf(grammarScope),i->{grammarScope=scopes[i];getPreferences(0).edit().putString("grammar_scope",grammarScope).apply();page=0;grammarPage();});
+         String[] states={"未学","已学未掌握","全部（含已掌握）"};choose("学习状态",states,Arrays.asList(states).indexOf(grammarStudyState),i->{grammarStudyState=states[i];page=0;grammarPage();});
+     }
+-    private void wordFormsPage(JSONObject w){screen(w.optString("kanji")+" · 词汇变形");text("基本形："+w.optString("kanji")+" 【"+wordReading(w)+"】",23);text("按来源明确的活用类别生成常规形式；特殊词与独立词义仍需核对。活用读音变化不作为新的基本读音。",14);for(JSONObject f:list(w.optJSONArray("wordForms")))card(()->{text(f.optString("label"),16);text(f.optString("form")+" 【"+f.optString("reading")+"】",22);button("朗读",()->speak(f.optString("reading")));});JSONArray variants=w.optJSONArray("sourceFormVariants");if(variants!=null){text("已归并的来源形式",19);for(JSONObject v:list(variants))text(v.optString("written")+" 【"+v.optString("reading")+"】\n"+v.optString("note"),15);}button("返回词条",this::wordPage);}
++    private void wordFormsPage(JSONObject w){wordFormsPage(w,this::wordPage);}
++    private void wordFormsPage(JSONObject w,Runnable back){screen(w.optString("kanji")+" · 词汇变形");text("基本形："+w.optString("kanji")+" 【"+wordReading(w)+"】",23);text("只展示资料中已有明确依据的活用；不按词尾盲目猜测特殊动词。",14);for(JSONObject f:list(w.optJSONArray("wordForms")))card(()->{text(f.optString("label"),16);text(f.optString("form")+" 【"+f.optString("reading")+"】",22);button("朗读",()->speak(f.optString("reading")));});JSONArray variants=w.optJSONArray("sourceFormVariants");if(variants!=null){text("已归并的来源形式",19);for(JSONObject v:list(variants))text(v.optString("written")+" 【"+v.optString("reading")+"】\n"+v.optString("note"),15);}button("返回动词",back);}
+     private JSONArray grammarMigrationCards(JSONArray grammar)throws JSONException{JSONArray cards=new JSONArray();for(JSONObject g:list(grammar)){JSONArray aliases=g.optJSONArray("mergedGrammarIds");if(aliases==null)continue;JSONArray ids=new JSONArray();for(int i=0;i<aliases.length();i++)ids.put("grammar:"+aliases.optString(i));cards.put(new JSONObject().put("id","grammar:"+g.optString("id")).put("mergedIds",ids));}return cards;}
+     private void grammarFamily(JSONObject g){screen(g.optString("grammarBody")+" · 接续与义项");text("同一语法本体的候选关联。接续变化集中查看，含义或功能不同的记录保留；表述不同但是否同义尚待核对。",14);JSONArray ids=g.optJSONArray("grammarFamilyIds");if(ids!=null)for(int i=0;i<ids.length();i++){JSONObject row=grammarById.get(ids.optString(i));if(row!=null)button(row.optString("pattern")+"\n"+row.optString("connection")+"\n"+row.optString("meaning"),()->grammarCard(Arrays.asList(row),0));}button("返回",()->grammarCard(Arrays.asList(g),0));}
+     private void showMergedMeanings(JSONObject w){button("去重释义与词典依据",()->wordReviewPage(w));if(w.optJSONArray("dictionaryRefIds")!=null&&w.optJSONArray("dictionaryRefIds").length()>0)button("词典释义与例句",()->wordDictionaries(w));}
+@@ -147,9 +148,9 @@ public class MainActivity extends Activity {
+     private boolean wordFilters(JSONObject w){return LearningLogic.scope(w,wordScope)&&LearningLogic.frequency(w,wordFrequency);}
+     private void wordFrequencyChoice(Runnable back){choose("频率与教材标签",LearningLogic.FREQUENCIES,Arrays.asList(LearningLogic.FREQUENCIES).indexOf(wordFrequency),i->{wordFrequency=LearningLogic.FREQUENCIES[i];getPreferences(0).edit().putString("word_frequency",wordFrequency).apply();batchIds.clear();wordIndex=0;revealed=false;back.run();});}
+     private void wordTopics(){screen("词性与标签专题");text("专题复用词卡、掌握状态与分批回忆练习。先选择等级，再选择词性或资料标签。",16);
+-        for(String category:LearningLogic.CATEGORIES)button(category,()->{wordCategory=category;wordScope="核心优先＋补充";wordFrequency="全部标签";wordStudyState="未学";batchIds.clear();wordIndex=0;revealed=false;wordPage();});
+-        for(String frequency:LearningLogic.FREQUENCIES)if(!frequency.equals("全部标签"))button(frequency,()->{wordCategory="全部词汇";wordScope="核心优先＋补充";wordFrequency=frequency;wordStudyState="未学";batchIds.clear();wordIndex=0;revealed=false;wordPage();});
+-        button("N4、N5惯用语与固定搭配",()->{wordLevel="N4,N5";wordCategory="惯用语／固定搭配";wordScope="核心优先＋补充";wordFrequency="全部标签";wordStudyState="未学";batchIds.clear();wordIndex=0;revealed=false;wordPage();});button("返回等级与分类",this::wordLibrary);
++        for(String category:LearningLogic.CATEGORIES)button(category,()->{wordCategory=category;wordScope="优先分级词表";wordFrequency="全部标签";wordStudyState="未学";batchIds.clear();wordIndex=0;revealed=false;wordPage();});
++        for(String frequency:LearningLogic.FREQUENCIES)if(!frequency.equals("全部标签"))button(frequency,()->{wordCategory="全部词汇";wordScope="优先分级词表";wordFrequency=frequency;wordStudyState="未学";batchIds.clear();wordIndex=0;revealed=false;wordPage();});
++        button("N4、N5惯用语与固定搭配",()->{wordLevel="N4,N5";wordCategory="惯用语／固定搭配";wordScope="优先分级词表";wordFrequency="全部标签";wordStudyState="未学";batchIds.clear();wordIndex=0;revealed=false;wordPage();});button("返回等级与分类",this::wordLibrary);
+     }
+     private void showFrequencyFacts(JSONObject w){JSONObject f=w.optJSONObject("corpusFacts");if(f==null)return;card(()->{text("词频与教材依据",19);text(f.optString("source"),13);if(f.optBoolean("excludedOnly")){text("此同形同读来源仅标为专名，未计入常用度统计。",16);return;}text("语料词次："+f.optLong("frequency")+" · 每百万词："+String.format(java.util.Locale.ROOT,"%.2f",f.optDouble("pmw"))+"\n教材词次（OT）："+f.optLong("textbookFrequency")+"\n学校词表词次："+f.optLong("schoolFrequency"),17);text("教材是语料子集，未重复相加。常见义与不常见义尚未分别统计。",13);});}
+     private boolean kanjiScopeMatches(JSONObject k){if(kanjiLevel.matches("N[1-5]"))return kanjiLevel.equals(k.optString("level"));if(kanjiLevel.equals("常用汉字")){JSONObject f=k.optJSONObject("frequencyFacts");return f!=null&&f.optString("source_kind").contains("常用")&&!f.optString("source_kind").contains("旧");}return true;}
+@@ -189,6 +190,13 @@ public class MainActivity extends Activity {
+             text("来源：OKJLPT词汇详情；🔊 使用本机或联网日语合成语音。",12);
+         });}}catch(Exception e){text("详情显示失败："+e.getMessage(),16);}finally{body=previous;}});}catch(Exception e){runOnUiThread(()->{if(request==structuredRequest){loading.setText("详情读取失败："+e.getMessage());}});}});
+     }
++    private void showCoreVocabularyInline(JSONObject word){JSONArray ids=word.optJSONArray("coreDetailIds");if(ids==null||ids.length()==0)return;
++        LinearLayout slot=new LinearLayout(this);slot.setOrientation(LinearLayout.VERTICAL);body.addView(slot,new LinearLayout.LayoutParams(-1,-2));TextView loading=new TextView(this);loading.setText("正在读取OKJLPT例句…");loading.setTextColor(Color.rgb(100,116,139));slot.addView(loading);long request=structuredRequest;
++        worker.execute(()->{try{JSONArray rows=detailRepository.vocabulary(ids);runOnUiThread(()->{if(isFinishing()||isDestroyed()||request!=structuredRequest)return;slot.removeAllViews();LinearLayout previous=body;body=slot;try{for(JSONObject row:list(rows)){
++            JSONArray tags=row.optJSONArray("detail_tags_or_categories");if(tags!=null&&tags.length()>0){StringJoiner label=new StringJoiner(" ／ ");for(int i=0;i<tags.length();i++)label.add(tags.optString(i));text("标签："+label,15);}
++            JSONArray examples=row.optJSONArray("examples");if(examples!=null&&examples.length()>0){text("例句",18);for(JSONObject ex:list(examples))rubyExample(ex.optString("sentence_with_reading",ex.optString("sentence")),ex.optString("translation"));}
++        }}finally{body=previous;}});}catch(Exception e){runOnUiThread(()->{if(request==structuredRequest)loading.setText("例句读取失败，可稍后重试");});}});
++    }
+ 
+     private void showCoreGrammar(JSONObject g){
+         if(g.optJSONArray("coreGrammar")!=null){renderCoreGrammar(g);return;}
+@@ -196,6 +204,7 @@ public class MainActivity extends Activity {
+         worker.execute(()->{try{JSONArray rows=detailRepository.grammar(g.optJSONArray("coreGrammarIds"));JSONObject copy=new JSONObject(g.toString()).put("coreGrammar",rows);runOnUiThread(()->{if(isFinishing()||isDestroyed()||request!=structuredRequest)return;slot.removeAllViews();LinearLayout old=body;body=slot;try{renderCoreGrammar(copy);}finally{body=old;}});}catch(Exception e){runOnUiThread(()->{if(request==structuredRequest)loading.setText("主库读取失败："+e.getMessage());});}});
+     }
+     private void loadWordForms(JSONObject w){screen("读取词汇变形");text("正在读取…",17);long request=structuredRequest;worker.execute(()->{try{JSONObject review=detailRepository.wordReview(w.optString("id"));JSONObject copy=new JSONObject(w.toString()).put("wordForms",review.optJSONArray("wordForms")).put("sourceFormVariants",review.optJSONArray("sourceFormVariants"));runOnUiThread(()->{if(request==structuredRequest)wordFormsPage(copy);});}catch(Exception e){runOnUiThread(()->{if(request==structuredRequest)alert(e.getMessage());});}});}
++    private void loadWordForms(JSONObject w,Runnable back){screen("读取词汇变形");text("正在读取…",17);long request=structuredRequest;worker.execute(()->{try{JSONObject review=detailRepository.wordReview(w.optString("id"));JSONObject copy=new JSONObject(w.toString()).put("wordForms",review.optJSONArray("wordForms")).put("sourceFormVariants",review.optJSONArray("sourceFormVariants"));runOnUiThread(()->{if(request==structuredRequest)wordFormsPage(copy,back);});}catch(Exception e){runOnUiThread(()->{if(request==structuredRequest)alert(e.getMessage());});}});}
+     private void wordReviewPage(JSONObject w){screen(w.optString("kanji")+" · 释义对照");text("主库原文保留；词典义项指向不唯一的表述仍待核。",15);TextView progress=text("正在读取…",16);long request=structuredRequest;worker.execute(()->{try{JSONObject r=detailRepository.wordReview(w.optString("id"));runOnUiThread(()->{if(request!=structuredRequest||isFinishing()||isDestroyed())return;progress.setVisibility(View.GONE);for(JSONObject m:list(r.optJSONArray("meaning_candidates_deduplicated")))card(()->{text(m.optString("meaning"),20);text(m.optBoolean("dictionary_merge_confirmed")?"已定位词典对应义项":"来源释义；同义关系仍需核对",14);JSONArray variants=m.optJSONArray("wording_variants");if(variants!=null&&variants.length()>1)text("合并的原表述："+variants,15);JSONArray evidence=m.optJSONArray("dictionary_sense_ids");if(evidence!=null&&evidence.length()>0)text("词典依据："+evidence,12);String id="word-sense:"+UUID.nameUUIDFromBytes((w.optString("id")+"\n"+m.optString("meaning")).getBytes(StandardCharsets.UTF_8));button(LearningLogic.mastered(store.state,id)?"此释义已掌握 · 撤销":"标记此释义已掌握",()->safe(()->{store.setMastered(id,!LearningLogic.mastered(store.state,id));wordReviewPage(w);}));});button("返回词卡",this::wordPage);});}catch(Exception e){runOnUiThread(()->{if(request==structuredRequest)progress.setText("读取失败："+e.getMessage());});}});}
+     private void wordDictionaries(JSONObject w){screen(w.optString("kanji")+" · 词典对照");TextView progress=text("正在读取…",16);long request=structuredRequest;worker.execute(()->{try{JSONArray rows=detailRepository.dictionary(w.optJSONArray("dictionaryRefIds"));runOnUiThread(()->{if(request!=structuredRequest||isFinishing()||isDestroyed())return;progress.setVisibility(View.GONE);for(JSONObject r:list(rows))button(r.optString("dictionary")+"\n"+r.optString("word")+" 【"+r.optString("reading")+"】",()->dictionaryDetail(r,0,()->wordDictionaries(w)));button("返回词卡",this::wordPage);});}catch(Exception e){runOnUiThread(()->{if(request==structuredRequest)progress.setText("读取失败："+e.getMessage());});}});}
+     private void dictionaryDetail(JSONObject r,int offset,Runnable back){screen(r.optString("word")+" · "+r.optString("dictionary"));text(r.optString("sourceStatus"),14);JSONArray ms=r.optJSONArray("meanings");if(ms!=null)for(int i=0;i<ms.length();i++)text(ms.optString(i),18);JSONArray ex=r.optJSONArray("examples");if(ex!=null){text("原词典例句 · "+ex.length()+"组",19);for(int i=offset;i<Math.min(ex.length(),offset+15);i++){JSONObject x=ex.optJSONObject(i);String ja=x.optString("annotated");if(r.optString("dictionary").contains("拟声"))ja=ja.replace("〜",r.optString("word"));rubyExample(ja,x.optString("translation"));}if(offset+15<ex.length())button("下一页例句",()->dictionaryDetail(r,offset+15,back));if(offset>0)button("上一页例句",()->dictionaryDetail(r,Math.max(0,offset-15),back));}button("返回词典列表",back);}
+@@ -275,12 +284,11 @@ public class MainActivity extends Activity {
+         studyProgress(wordIndex+1,size);
+         studyHeader(mode==1?"听音回忆":mode==0?(wordReading(w).isEmpty()?w.optString("kanji")+"（读音待核）":wordReading(w)):mode==2?w.optString("kanji"):wordMeaning(w),w.optString("level","未标级"),LearningLogic.mastered(store.state,w.optString("id")),()->markWord(selected,w),wordReading(w),()->{revealed=!revealed;expandedWordSections.clear();wordPage();});
+         JSONArray webSources=w.optJSONArray("coreSourceRecords");if(webSources!=null&&webSources.length()>0){String url=webSources.optJSONObject(0).optString("url");if(url.startsWith("https://okjlpt.com/"))button("打开原词条网页（发音／音调）",()->safe(()->startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse(url)))));}
+-        if(mode==1){button("播放日语发音",()->speak(wordReading(w)));text("先听声音，再回忆中文意思。",17);}
+-        else{if(mode!=3||revealed)button("播放日语",()->speak(wordReading(w)));}
++        if(mode==1)text("点击词卡右侧的🔊，先听声音，再回忆中文意思。",17);
+         if(!revealed){text("点击上方词汇，或点击下面按钮查看词义和例句。",14);primary("显示词义和例句",()->{revealed=true;wordPage();});}
+         else {
+-            card(()->{text(w.optString("kanji"),30);TextView kana=text(wordReading(w),22);kana.setTextColor(Color.rgb(25,117,92));text("词性："+w.optString("pos"),14);String direction=w.optString("transitivity",verbDirection(w));if(!w.optString("dictionaryPOS").isEmpty())text("词典词性："+w.optString("dictionaryPOS"),16);if(!direction.isEmpty())text("动词性质："+direction,16);text("读音："+(wordReading(w).isEmpty()?"来源读音待核":wordReading(w))+"\n音调："+(w.optJSONObject("corePitch")!=null&&w.optJSONObject("corePitch").has("number")?w.optJSONObject("corePitch").optString("label")+"（原页标注）":"此源未提供；可查词典候选"),16);text("含义 · 原表释义",17);text(wordMeaning(w),21);if(!w.optString("synonymNote").isEmpty())text("个人近义补充："+w.optString("synonymNote"),17);if(!w.optString("antonymNote").isEmpty())text("个人反义补充："+w.optString("antonymNote"),17);text(w.optString("sourcePartition"),13);});
+-            showCoreVocabulary(w);furiganaButton(this::wordPage);
++            card(()->{text(w.optString("kanji"),30);TextView kana=text(wordReading(w),23);kana.setTextColor(Color.rgb(22,128,92));String direction=w.optString("transitivity",verbDirection(w));StringJoiner meta=new StringJoiner(" ／ ");if(!w.optString("pos").isEmpty())meta.add(w.optString("pos"));if(!direction.isEmpty())meta.add(direction);if(w.optJSONObject("corePitch")!=null&&w.optJSONObject("corePitch").has("number"))meta.add("音调 "+w.optJSONObject("corePitch").optString("label"));text(meta.toString(),15);text(wordMeaning(w),21);String source=w.optBoolean("corePriority")?"OKJLPT主词库 · "+w.optString("level","未标级"):w.optString("source","补充资料");text("来源："+source,13);showCoreVocabularyInline(w);});
++            furiganaButton(this::wordPage);
+             wordSectionButton("资料","词典、例句、音调、来源与关联");
+             if(expandedWordSections.contains("资料")){if(w.optBoolean("hasWordForms")||w.has("wordForms"))button("词汇变形",()->loadWordForms(w));showMergedMeanings(w);showAnkiMaterial(w);showFrequencyFacts(w);if(w.has("dictionaryUsageIds"))button("词典原用法标签与释义",()->dictionaryUsagePage(w));button("v9主库同形词条与来源",()->v9Page("词汇",w.optString("kanji"),0));button("词典词性／近义辨析／反义词",()->dictionaryDetail(w.optString("kanji"),this::wordPage));button("同音词／构词家族",()->wordRelations(w));text(w.optString("levelSource"),13);if(!w.optString("categoryBasis").isEmpty())text(w.optString("categoryBasis"),13);text("频次参考："+w.optInt("frequency")+"；0表示未取得统计，不是未来出题概率。",13);showMimeticMaterial(w);button("更多词典例句与对照译文",()->openExamples(false,new String[]{w.optString("kanji"),wordReading(w)},this::wordPage));button("词典音调候选（同形同读）",()->pitchPage(w.optString("kanji"),wordReading(w),this::wordPage));button("原始词卡与出处",()->archiveWordSources(w));}
+             wordSectionButton("评分","忘记、想得慢、认识");
+@@ -354,7 +362,9 @@ public class MainActivity extends Activity {
+     private void dictionaryEntry(JSONObject entry,Runnable back){safe(()->{JSONArray one=new JSONArray().put(entry);applyEdits(one);screen(entry.optString("written"));text(entry.optString("reading"),24);text("词典词性："+entry.optString("pos"),19);text(entry.optString("meaning"),19);text(entry.optString("source")+" · 第"+entry.optString("line")+"行",13);button("朗读",()->speak(entry.optString("reading")));button("近义辨析与反义词",()->dictionaryDetail(entry.optString("written"),()->dictionaryEntry(entry,back)));button("修改此词典条目",()->editContent(entry,new String[]{"written","reading","pos","meaning"},()->dictionaryEntry(entry,back)));String id="dictionary:"+entry.optString("id");button(LearningLogic.mastered(store.state,id)?"已掌握 · 点击撤销":"点击掌握",()->safe(()->{store.setMastered(id,!LearningLogic.mastered(store.state,id));dictionaryEntry(entry,back);}));button("返回",back);});}
+     private void dictionaryDetail(String head,Runnable back){safe(()->{screen(head+" · 词典与关系");JSONArray entries=lexical.entries(head);text("同词形词条；请结合读音和义项选择",14);for(JSONObject x:list(entries))button(x.optString("written")+"（"+x.optString("reading")+"） · "+x.optString("pos"),()->dictionaryEntry(x,()->dictionaryDetail(head,back)));JSONArray groups=lexical.groups(head);text("近义分组 "+groups.length()+" 组",20);for(JSONObject g:list(groups)){text(g.optString("common"),19);text(g.optString("distinction"),17);for(JSONObject member:list(new JSONArray(g.optString("members")))){String h=member.optString("written");button(h+"（"+member.optString("reading")+"）",()->dictionaryDetail(h,()->dictionaryDetail(head,back)));}text(g.optString("source")+" · 第"+g.optString("line")+"行",12);}JSONArray anti=lexical.antonyms(head);text("原词典明确反义关系 "+anti.length()+" 条",20);for(JSONObject x:list(anti)){String h=x.optString("target");button(h,()->dictionaryDetail(h,()->dictionaryDetail(head,back)));text(x.optString("context")+"\n"+x.optString("source")+" · 第"+x.optString("line")+"行",14);}button("搜索词典总库",()->dictionarySearch(head,0));button("返回",back);});}
+     private boolean kanjiMatches(JSONObject k){if(kanjiMastery.equals("全部"))return true;JSONArray rs=k.optJSONArray("readings");if(rs==null||rs.length()==0)return kanjiMastery.equals("有未掌握读音");boolean all=true;for(JSONObject r:list(rs))if(!LearningLogic.mastered(store.state,"kanji-reading:"+k.optString("character")+":"+r.optString("reading")))all=false;return kanjiMastery.equals("全部读音已掌握")?all:!all;}
+-    private void kanjiCompounds(JSONObject k,JSONObject reading){safe(()->{screen(k.optString("character")+" · "+reading.optString("reading"));JSONArray examples=lexical.compounds(k.optString("character"),reading.optString("reading"));text("按词典逐字注音精确关联；本页最多100项，按词长排列，不代表使用频率。",14);if(examples.length()==0)text("此读音尚未取得带逐字注音的对应词组。",18);for(JSONObject x:list(examples)){button(x.optString("written")+"（"+x.optString("kana")+"）",()->dictionaryDetail(x.optString("written"),()->kanjiCompounds(k,reading)));text("本字实际读音："+x.optString("reading")+" · "+x.optString("source")+" 第"+x.optString("line")+"行",12);}button("返回此字",()->kanjiDetail(k));});}
++    private String kanaKey(String value){String s=value==null?"":value.replaceAll("[（(].*?[）)]","").replace(".","").replace("-","").trim();StringBuilder out=new StringBuilder();for(char c:s.toCharArray()){if(c>='ァ'&&c<='ヶ')c-=96;out.append(c);}return out.toString();}
++    private List<JSONObject> commonKanjiWords(JSONObject k,JSONObject reading){String character=k.optString("character"),needle=kanaKey(reading.optString("reading"));List<JSONObject> out=new ArrayList<>();for(JSONObject w:list(words)){if(!w.optBoolean("corePriority")||!w.optString("kanji").contains(character))continue;String kana=kanaKey(wordReading(w));if(!needle.isEmpty()&&!kana.contains(needle))continue;out.add(w);}out.sort((a,b)->{long af=a.optJSONObject("corpusFacts")==null?0:a.optJSONObject("corpusFacts").optLong("frequency"),bf=b.optJSONObject("corpusFacts")==null?0:b.optJSONObject("corpusFacts").optLong("frequency");int c=Long.compare(bf,af);if(c!=0)return c;c=Integer.compare(a.optString("kanji").length(),b.optString("kanji").length());return c!=0?c:a.optString("kanji").compareTo(b.optString("kanji"));});return out.subList(0,Math.min(12,out.size()));}
++    private void kanjiCompounds(JSONObject k,JSONObject reading){String character=k.optString("character"),sound=reading.optString("reading");screen(character+" · "+sound+"的常用词");List<JSONObject> candidates=commonKanjiWords(k,reading);text("优先采用OKJLPT主词库，并按语料常用度排列；显示词义、例句和中文翻译。",14);if(candidates.isEmpty()){text("主词库暂未找到此读音的常用词。表外读音不会为了凑数而加入。",18);button("返回此字",()->kanjiDetail(k));return;}JSONArray ids=new JSONArray();for(JSONObject w:candidates){JSONArray a=w.optJSONArray("coreDetailIds");if(a!=null)for(int i=0;i<a.length();i++)ids.put(a.optString(i));}TextView loading=text("正在读取例句…",15);long request=structuredRequest;worker.execute(()->{try{JSONArray details=detailRepository.vocabulary(ids);runOnUiThread(()->{if(request!=structuredRequest||isFinishing()||isDestroyed())return;loading.setVisibility(View.GONE);for(JSONObject w:candidates)card(()->{text(w.optString("kanji"),25);TextView kana=text(wordReading(w),19);kana.setTextColor(Color.rgb(22,128,92));text(wordMeaning(w),18);text(w.optString("level","未标级")+" · OKJLPT主词库",13);for(JSONObject d:list(details))if(d.optString("word").equals(w.optString("kanji"))&&d.optString("reading").equals(wordReading(w))){JSONArray ex=d.optJSONArray("examples");if(ex!=null&&ex.length()>0){JSONObject first=ex.optJSONObject(0);rubyExample(first.optString("sentence_with_reading",first.optString("sentence")),first.optString("translation"));}break;}button("查看完整词卡",()->openSingleWord(w));});button("返回此字",()->kanjiDetail(k));});}catch(Exception e){runOnUiThread(()->{if(request==structuredRequest){loading.setText("例句读取失败；词汇仍可从词汇学习中查看。");for(JSONObject w:candidates)button(w.optString("kanji")+"（"+wordReading(w)+"）\n"+wordMeaning(w),()->openSingleWord(w));button("返回此字",()->kanjiDetail(k));}});}});}
+     private JSONObject newNote()throws JSONException{return NotebookLogic.normalized(new JSONObject().put("id",UUID.randomUUID().toString()).put("question","").put("answer","").put("correctAnswer","").put("section","词汇").put("category","词汇").put("reason","").put("note",""));}
+     private void notebookPage(){
+         screen("错题本 · 分类汇总");
+@@ -484,7 +494,7 @@ public class MainActivity extends Activity {
+     private String humanBytes(long bytes){if(bytes<1024)return bytes+" B";double value=bytes;String[] units={"KB","MB","GB"};int i=-1;do{value/=1024;i++;}while(value>=1024&&i<units.length-1);return String.format(Locale.ROOT,"%.1f %s",value,units[i]);}
+     private void profile(){
+         screen("我的 · 自动保存");
+-        text("V25 · 6006主词库优先 · 945条主语法 · 真题专项／错题分类／声音缓存",17);
++        text("V27 · 6006主词库优先 · 945条主语法 · 四部分真题／错题分类／声音缓存",17);
+         text("词汇 "+words.length()+" · 语法 "+grammar.length()+"\n真题底稿 "+exams.length()+" · 汉字 "+kanji.length(),18);
+         text("已复习 "+store.state.optJSONObject("reviews").length()+" 词；自建错题 "+store.state.optJSONArray("notebook").length()+" 道",16);
+         primary("其他功能 · 搜索／修改／导入／备份／语音设置",this::otherFunctions);
+@@ -495,11 +505,13 @@ public class MainActivity extends Activity {
+     private void annotatedWords(boolean favorites){screen(favorites?"收藏词卡":"错词与错因");List<JSONObject> filtered=new ArrayList<>();for(JSONObject w:list(words)){String id=w.optString("id");JSONObject a=store.annotation(id),r=store.review(id);if(favorites?(a!=null&&a.optBoolean("favorite")):((a!=null&&!a.optString("reason").isEmpty())||(r!=null&&r.optInt("lapses")>0)))filtered.add(w);}pager(filtered,w->button(w.optString("kanji")+" · "+w.optString("kana")+"\n"+w.optString("meaning"),()->wordNotes(w)),()->annotatedWords(favorites));button("返回我的",this::profile);}
+     private String readings(JSONArray a){if(a==null)return "";StringBuilder b=new StringBuilder();for(int i=0;i<a.length();i++){if(i>0)b.append("、");b.append(a.optString(i));}return b.toString();}
+     private void kanjiPage(){screen("汉字学习与频率");String[] ranges={"全部3500字","常用汉字","N5","N4","N3","N2","N1"};if("全部".equals(kanjiLevel))kanjiLevel="全部3500字";choose("学习范围",ranges,Math.max(0,Arrays.asList(ranges).indexOf(kanjiLevel)),i->{kanjiLevel=ranges[i];page=0;kanjiPage();});choose("汉字排序",new String[]{"词形加权频率","学校词频","原顺序"},Arrays.asList("词形加权频率","学校词频","原顺序").indexOf(kanjiOrder),i->{kanjiOrder=new String[]{"词形加权频率","学校词频","原顺序"}[i];page=0;kanjiPage();});EditText q=input("搜索汉字或读音",query);button("搜索",()->{query=q.getText().toString();page=0;kanjiPage();});choose("读音学习状态",new String[]{"全部","有未掌握读音","全部读音已掌握"},Arrays.asList("全部","有未掌握读音","全部读音已掌握").indexOf(kanjiMastery),i->{kanjiMastery=new String[]{"全部","有未掌握读音","全部读音已掌握"}[i];page=0;kanjiPage();});text("点击汉字可分别记忆音读和训读；JLPT等级是学习参考。",13);List<JSONObject> filtered=new ArrayList<>();for(JSONObject k:list(kanji))if(kanjiScopeMatches(k)&&matches(k,query,"character","onyomi","kunyomi")&&kanjiMatches(k))filtered.add(k);if(!kanjiOrder.equals("原顺序"))filtered.sort((a,b)->Long.compare(kanjiFrequency(b),kanjiFrequency(a)));text("按去专名后的词形加权统计排序；词形统计与正文字符频率分别标注。",13);pager(filtered,k->button(k.optString("character")+"\n音读："+readings(k.optJSONArray("onyomi"))+"\n训读："+readings(k.optJSONArray("kunyomi")),()->kanjiDetail(k)),this::kanjiPage);button("返回",this::profile);}
+-    private void kanjiDetail(JSONObject k){String character=k.optString("character");screen(character+" · 读音学习");showKanjiFacts(k);button("练写「"+character+"」",()->handwritingPage("kanji:"+character,character));JSONArray readings=k.optJSONArray("readings");if(readings==null){text("此字当前没有可分项的读音资料。",18);return;}choose("本字读音",new String[]{"全部","未掌握","已掌握"},Arrays.asList("全部","未掌握","已掌握").indexOf(readingMastery),i->{readingMastery=new String[]{"全部","未掌握","已掌握"}[i];kanjiDetail(k);});for(JSONObject r:list(readings)){String reading=r.optString("reading"),id="kanji-reading:"+character+":"+reading;boolean done=LearningLogic.mastered(store.state,id);if((readingMastery.equals("已掌握")&&!done)||(readingMastery.equals("未掌握")&&done))continue;card(()->{text(reading,25);text(r.optString("kind")+" · "+r.optString("schoolCategory"),16);button("此读音的词组",()->kanjiCompounds(k,r));button(done?"已掌握 · 点击撤销":"点击掌握",()->safe(()->{store.setMastered(id,!LearningLogic.mastered(store.state,id));kanjiDetail(k);}));});}button("返回汉字目录",this::kanjiPage);}
+-    private void verbsPage(){screen("动词专项 · 21个教学样例");text("15项展示包含辞书形与ます词干；分类明确提供，不按词尾猜测。特殊敬语音便等尚未覆盖。",14);for(JSONObject v:list(verbs))button(v.optString("written")+"（"+v.optString("reading")+"） · "+v.optString("meaning"),()->verbDetail(v));button("返回我的",this::profile);}
++    private void kanjiDetail(JSONObject k){String character=k.optString("character");screen(character+" · 音读与训读");showKanjiFacts(k);button("练写「"+character+"」",()->handwritingPage("kanji:"+character,character));JSONArray readings=k.optJSONArray("readings");if(readings==null){text("此字当前没有可分项的读音资料。",18);return;}choose("本字读音",new String[]{"全部","未掌握","已掌握"},Arrays.asList("全部","未掌握","已掌握").indexOf(readingMastery),i->{readingMastery=new String[]{"全部","未掌握","已掌握"}[i];kanjiDetail(k);});for(String kind:new String[]{"音读","训读"}){text(kind,21);int shown=0;for(JSONObject r:list(readings)){if(!kind.equals(r.optString("kind"))||r.optString("schoolCategory").contains("表外"))continue;String reading=r.optString("reading"),id="kanji-reading:"+character+":"+reading;boolean done=LearningLogic.mastered(store.state,id);if((readingMastery.equals("已掌握")&&!done)||(readingMastery.equals("未掌握")&&done))continue;shown++;card(()->{TextView value=text(reading,25);value.setTextColor(Color.rgb(22,128,92));text(r.optString("schoolCategory"),14);button("常用词、例句与中文意思",()->kanjiCompounds(k,r));button(done?"已掌握 · 点击撤销":"点击掌握",()->safe(()->{store.setMastered(id,!LearningLogic.mastered(store.state,id));kanjiDetail(k);}));});}if(shown==0)text("当前筛选下没有常用"+kind+"。",14);}text("表外读音默认隐藏，避免影响JLPT与日常高频学习。",13);button("返回汉字目录",this::kanjiPage);}
++    private void verbsPage(){verbCatalogPage("全部","",0);}
++    private void verbCatalogPage(String level,String term,int offset){screen("动词专项 · OKJLPT主词库");String[] levels={"全部","N5","N4","N3","N2","N1"};choose("等级",levels,Math.max(0,Arrays.asList(levels).indexOf(level)),i->verbCatalogPage(levels[i],term,0));EditText q=input("搜索动词、读音或中文意思",term);button("搜索",()->verbCatalogPage(level,q.getText().toString(),0));List<JSONObject> rows=new ArrayList<>();for(JSONObject w:list(words))if(w.optBoolean("corePriority")&&LearningLogic.category(w,"动词")&&("全部".equals(level)||LearningLogic.level(w,level))&&matches(w,term,"kanji","kana","meaning","coreMeaning"))rows.add(w);text("共 "+rows.size()+" 个主词库动词；有明确活用资料 "+rows.stream().filter(x->x.optBoolean("hasWordForms")).count()+" 个。",15);for(int i=offset;i<Math.min(offset+50,rows.size());i++){JSONObject w=rows.get(i);button(w.optString("kanji")+"（"+wordReading(w)+"） · "+w.optString("level")+"\n"+wordMeaning(w),()->verbCatalogDetail(w,level,term,offset));}if(offset+50<rows.size())button("下一页",()->verbCatalogPage(level,term,offset+50));if(offset>0)button("上一页",()->verbCatalogPage(level,term,Math.max(0,offset-50)));button("返回我的",this::profile);}
++    private void verbCatalogDetail(JSONObject w,String level,String term,int offset){screen(w.optString("kanji")+" · 动词");card(()->{text(w.optString("kanji"),30);TextView kana=text(wordReading(w),23);kana.setTextColor(Color.rgb(22,128,92));text(wordMeaning(w),20);text(w.optString("pos")+" ／ "+w.optString("transitivity",verbDirection(w))+" ／ "+w.optString("level"),15);text("来源：OKJLPT主词库",13);});button("🔊 朗读",()->speak(wordReading(w)));if(w.optBoolean("hasWordForms"))primary("查看有来源依据的动词活用",()->loadWordForms(w,()->verbCatalogDetail(w,level,term,offset)));else text("此词当前没有完整活用记录，因此不自动猜测生成。",14);button("查看例句与完整词卡",()->openSingleWord(w));button("返回动词目录",()->verbCatalogPage(level,term,offset));}
+     private void verbDetail(JSONObject v){screen(v.optString("written")+" · 动词变形");text(v.optString("group")+" · "+v.optString("transitivity"),16);text(v.optString("note"),15);safe(()->{LinkedHashMap<String,String> forms=VerbEngine.forms(v.getString("written"),v.getString("group"),v.getString("profile"));for(Map.Entry<String,String> item:forms.entrySet())text(item.getKey()+"："+item.getValue(),19);button("变形回忆练习",()->verbQuiz(v,forms,2,false));});button("返回专项",this::verbsPage);}
+     private void verbQuiz(JSONObject v,LinkedHashMap<String,String> forms,int index,boolean reveal){List<String> keys=new ArrayList<>(forms.keySet());int i=index>=keys.size()?2:index;String label=keys.get(i),value=forms.get(label);screen("动词变形回忆");text(v.optString("written"),32);text("请回忆："+label,23);text("自评练习，不自动判分。",14);if(reveal){text(value,30);button("下一项",()->verbQuiz(v,forms,i+1,false));}else button("揭示答案",()->safe(()->{JSONObject next=store.copy();next.put("verbRecallCount",next.getInt("verbRecallCount")+1);store.write(next,false);verbQuiz(v,forms,i,true);}));button("返回变形表",()->verbDetail(v));}
+-    private void keigoPage(String type){screen("敬语五分类与语境");String[] types={"全部","尊敬语","谦让语Ⅰ","谦让语Ⅱ（丁重语）","丁宁语","美化语"};choose("类别",types,Arrays.asList(types).indexOf(type),i->keigoPage(types[i]));List<JSONObject> filtered=new ArrayList<>();for(JSONObject k:list(keigo))if(type.equals("全部")||type.equals(k.optString("type")))filtered.add(k);if(!filtered.isEmpty())button("情境回忆练习",()->keigoQuiz(filtered,0,false));text("15个自编教学情境，尚未完成词典交叉终审。",14);for(JSONObject k:filtered){text(k.optString("base")+" → "+k.optString("expression"),23);text(k.optString("reading")+" · "+k.optString("type")+"\n主体："+k.optString("actor")+"\n对象："+k.optString("target")+"\n听话人："+k.optString("listener"),16);text(k.optString("situation")+"\n"+k.optString("example")+"\n"+k.optString("caution"),17);}button("返回我的",this::profile);}
++    private void keigoPage(String type){screen("敬语体系 · 常用表达");String[] types={"全部","尊敬语","谦让语Ⅰ","谦让语Ⅱ（丁重语）","丁宁语","美化语","商务固定表达"};choose("类别",types,Math.max(0,Arrays.asList(types).indexOf(type)),i->keigoPage(types[i]));List<JSONObject> filtered=new ArrayList<>();for(JSONObject k:list(keigo))if(type.equals("全部")||type.equals(k.optString("type")))filtered.add(k);if(!filtered.isEmpty())button("情境回忆练习",()->keigoQuiz(filtered,0,false));text("共 "+keigo.length()+" 个常用敬语与正式表达；区分尊敬语、谦让语Ⅰ、丁重语、丁宁语、美化语及商务固定表达。",14);for(JSONObject k:filtered)card(()->{text(k.optString("base")+" → "+k.optString("expression"),23);TextView reading=text(k.optString("reading"),18);reading.setTextColor(Color.rgb(22,128,92));text(k.optString("type")+"\n主体："+k.optString("actor")+"\n对象："+k.optString("target"),15);text(k.optString("example"),18);text(k.optString("caution"),14);button("🔊 朗读例句",()->speak(k.optString("example")));});button("返回我的",this::profile);}
+     private void keigoQuiz(List<JSONObject> items,int index,boolean reveal){JSONObject k=items.get(index%items.size());screen("敬语情境回忆");text(k.optString("situation"),23);text("基本表达："+k.optString("base"),19);if(reveal){text(k.optString("expression")+"（"+k.optString("reading")+"）",26);text(k.optString("example")+"\n"+k.optString("caution"),18);button("下一题",()->keigoQuiz(items,index+1,false));}else button("揭示表达",()->keigoQuiz(items,index,true));button("返回敬语专项",()->keigoPage("全部"));}
+     @Override protected void onActivityResult(int request,int result,Intent data){super.onActivityResult(request,result,data);if(result!=RESULT_OK||data==null)return;if(request==IMPORT_MEDIA){importSelectedMedia(data);return;}Uri uri=data.getData();if(uri==null)return;
+         if(request==IMPORT_DATA_PACK){screen("导入完整扩展资料");text("正在校验并安装V9主库、详情库和完整词典。这些大型资料不再放入APK；学习记录独立保留。",18);worker.execute(()->{try(InputStream in=getContentResolver().openInputStream(uri)){if(in==null)throw new IOException("无法打开资料包");OptionalDataPack.install(this,in,v9,detailRepository,lexical);runOnUiThread(()->{if(!isFinishing()&&!isDestroyed()){profile();alert("完整扩展资料导入完成；学习与掌握记录保留。");}});}catch(Exception e){runOnUiThread(()->{if(!isFinishing()&&!isDestroyed()){otherFunctions();alert("未导入完整资料："+e.getMessage());}});}});return;}
+@@ -522,7 +534,7 @@ public class MainActivity extends Activity {
+         text("已缓存 "+speech.cachedCount()+" 个音频。自动模式优先用本机语音；没有日语引擎或播放失败时，直接联网合成，无需安装TTS软件。联网音频自动缓存，缓存上限128MB。",15);
+         text("联网时，当前点击的日语文本会发送给 tts.quest 合成；请勿输入私人信息。免费服务可能排队、限流或中断；离线模式只用本机引擎和已有缓存。合成发音不等于词典音调示范。",14);
+         text(speech.cloudCredit(),14);
+-        String[] modes={"auto","offline","online"};choose("播放方式",new String[]{"自动（本机优先，失败联网）","仅离线","独立联网（无需TTS）"},Arrays.asList(modes).indexOf(speech.mode()),i->{speech.mode(modes[i]);speechPage();});
++        String[] modes={"auto","offline","online"};choose("播放方式",new String[]{"自动（成人联网音色优先，失败转本机）","仅离线","独立联网（无需TTS）"},Arrays.asList(modes).indexOf(speech.mode()),i->{speech.mode(modes[i]);speechPage();});
+         int cloudVoice=0;for(int i=0;i<CloudVoiceClient.SPEAKER_IDS.length;i++)if(CloudVoiceClient.SPEAKER_IDS[i]==speech.cloudSpeaker())cloudVoice=i;
+         choose("联网成人音色",CloudVoiceClient.SPEAKER_LABELS,cloudVoice,i->{speech.selectCloudSpeaker(CloudVoiceClient.SPEAKER_IDS[i]);speechPage();});
+         text("可用TTS引擎",20);List<String[]> engines=speech.engines();if(engines.isEmpty())text("系统未报告可用语音服务，请打开下方系统设置安装或启用。",16);
+@@ -542,7 +554,7 @@ public class MainActivity extends Activity {
+         text("学习目标："+target+" · "+(days>=0?"还有 "+days+" 天":"目标日已过"),15);
+         card(()->{JSONObject activity=store.state.optJSONObject("activity");if(activity==null)activity=new JSONObject();JSONObject today=activity.optJSONObject(LearningLogic.today());int reviewed=today==null?0:today.optInt("reviews");int streak=LearningLogic.streak(activity,java.time.LocalDate.now(java.time.ZoneId.of("Asia/Tokyo")));text("今天的学习状态",20);text("词卡评分 "+reviewed+" 次    连续评分 "+streak+" 天",18);safe(()->text("待复习 "+LearningLogic.dueCount(words,store.state,System.currentTimeMillis())+" 词",18));text("评分是自我回忆评价，不作为客观答题正确率。",13);});
+         JSONObject session=store.state.optJSONObject("studySession");if(session!=null&&!session.optBoolean("completed"))primary("继续上次词汇学习",this::resumeWordSession);
+-        primary("学习未学词汇 · 自选等级",()->{tab=1;wordLevel="N2,N1";wordFrequency="全部标签";wordScope="核心优先＋补充";wordStudyState="未学";wordCategory="全部词汇";wordLibrary();});primary("学习未学语法 · 主库945条",()->{tab=1;grammarScope="优先分级语法";grammarStudyState="未学";page=0;query="";grammarPage();});primary("真题专项／自由组卷",this::examTrainingHub);text("学习内容",21);grid(new String[]{"词汇学习","语法学习","听力专区","真题资料","动词变形","敬语情境","3500汉字","收藏词卡","学习看板","拟声拟态词"},new Runnable[]{()->{tab=1;wordLibrary();},()->{tab=1;page=0;query="";grammarPage();},()->{tab=1;listeningHub();},()->{tab=1;examTimeline();},this::verbsPage,()->keigoPage("全部"),()->{query="";page=0;kanjiPage();},()->{page=0;annotatedWords(true);},this::dashboard,()->{tab=1;wordScope="拟声拟态词典";wordStudyState="未学";wordLevel="全部";wordCategory="拟声拟态词";wordLibrary();}});
++        primary("学习未学词汇 · OKJLPT 6006主词库",()->{tab=1;wordLevel="N2,N1";wordFrequency="全部标签";wordScope="优先分级词表";wordStudyState="未学";wordCategory="全部词汇";wordLibrary();});primary("学习未学语法 · 主库945条",()->{tab=1;grammarScope="优先分级语法";grammarStudyState="未学";page=0;query="";grammarPage();});primary("真题专项／自由组卷",this::examTrainingHub);text("学习内容",21);grid(new String[]{"词汇学习","语法学习","听力专区","真题资料","2000+动词","完整敬语","3500汉字","收藏词卡","学习看板","拟声拟态词"},new Runnable[]{()->{tab=1;wordLibrary();},()->{tab=1;page=0;query="";grammarPage();},()->{tab=1;listeningHub();},()->{tab=1;examTimeline();},this::verbsPage,()->keigoPage("全部"),()->{query="";page=0;kanjiPage();},()->{page=0;annotatedWords(true);},this::dashboard,()->{tab=1;wordScope="拟声拟态词典";wordStudyState="未学";wordLevel="全部";wordCategory="拟声拟态词";wordLibrary();}});
+         text("资料与复习",21);button("N1–N5分级学习统计",()->v9Progress("N2"));button("资料总库（全量词典可选导入）",()->v9Page("词汇","",0));button("89场结构化真题",()->structuredExamList(examLevels,"",0));button("到期复习",()->{tab=2;reviewHub();});button("我的错题本",()->{tab=3;notebookPage();});button("V9音·形·义／语法错因汇总",this::v9ErrorOverview);button("其他功能 · 导入／备份／设置",this::otherFunctions);button("修改学习目标日期",()->{java.time.LocalDate d=java.time.LocalDate.parse(getPreferences(0).getString("target_date","2026-12-06"));new DatePickerDialog(this,(picker,y,m,day)->{String date=java.time.LocalDate.of(y,m+1,day).toString();getPreferences(0).edit().putString("target_date",date).apply();homePage();},d.getYear(),d.getMonthValue()-1,d.getDayOfMonth()).show();});
+     }
+     private void grid(String[] names,Runnable[] actions){for(int row=0;row<names.length;row+=3){LinearLayout line=new LinearLayout(this);for(int col=0;col<3&&row+col<names.length;col++){final int n=row+col;Button b=new Button(this);b.setText(names[n]);b.setTextSize(14);b.setAllCaps(false);b.setPadding(dp(4),dp(12),dp(4),dp(12));b.setTextColor(Color.rgb(30,86,173));b.setBackground(rounded(Color.WHITE));b.setOnClickListener(v->actions[n].run());LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(0,dp(72),1);lp.setMargins(dp(3),dp(4),dp(3),dp(4));line.addView(b,lp);}body.addView(line,new LinearLayout.LayoutParams(-1,-2));}}
+@@ -861,7 +873,7 @@ public class MainActivity extends Activity {
+         grid(new String[]{"汉字读音","汉字书写","词汇语境","语法","阅读","听力"},new Runnable[]{
+             ()->specialPracticeSetup("汉字读音"),()->specialPracticeSetup("汉字书写"),()->specialPracticeSetup("词汇语境"),()->specialPracticeSetup("语法"),()->specialPracticeSetup("阅读"),()->specialPracticeSetup("听力")});
+         button("按年份场次完整模拟",()->examSimulationSessions(examLevels,""));
+-        button("逐题检索与作答",()->structuredExamList(examLevels,"",0));
++        button("按文字词汇／文法／读解／听力练习",()->structuredExamList(examLevels,"",0));
+         button("错题专项复习",()->{tab=3;notebookPage();});
+         TextView counts=text("正在统计当前等级题型…",14);final long token=structuredRequest;
+         worker.execute(()->{try{JSONArray rows=offlineMaster.questionCategoryCounts(examLevels);Map<String,Integer> totals=new LinkedHashMap<>();for(String label:QuestionCategory.LABELS)if(!"全部题型".equals(label))totals.put(label,0);for(JSONObject row:list(rows)){String label=QuestionCategory.label(row.optInt("question_type"));totals.put(label,totals.getOrDefault(label,0)+row.optInt("count"));}runOnUiThread(()->{if(token!=structuredRequest)return;StringJoiner summary=new StringJoiner(" · ");for(Map.Entry<String,Integer> e:totals.entrySet())summary.add(e.getKey()+" "+e.getValue());counts.setText(examLevels.replace(",","＋")+" 可判分题："+summary);});}catch(Exception e){runOnUiThread(()->{if(token==structuredRequest)counts.setText("题型统计读取失败："+e.getMessage());});}});
+@@ -902,7 +914,7 @@ public class MainActivity extends Activity {
+     }
+     private void customPracticeQuestion(){
+         if(customIndex>=customQuestions.length()){finishCustomPractice();return;}JSONObject q=customQuestions.optJSONObject(customIndex);if(q==null){customIndex++;customPracticeQuestion();return;}
+-        boolean timed=customDeadline>0;final RadioGroup[] currentGroup={null};examHeader(customTitle,customIndex,customQuestions.length(),customAnswers.length(),()->closeCustomPractice(q,currentGroup[0]));text(QuestionCategory.label(q.optInt("question_type"))+" · "+q.optString("exam_id"),15);
++        boolean timed=customDeadline>0;final RadioGroup[] currentGroup={null};examHeader(customTitle,customIndex,customQuestions.length(),customAnswers.length(),()->closeCustomPractice(q,currentGroup[0]));text(examArea(q.optInt("question_type"))+" · "+examProblem(q)+" · 练习第"+(customIndex+1)+"题 · "+q.optString("exam_id"),15);
+         long timerLength=timed?customDeadline-System.currentTimeMillis():24L*60*60*1000;if(timed&&timerLength<=0){finishCustomPractice();return;}TextView clock=text(timed?"剩余时间：--:--":"已用时间：--:--",19);clock.setTextColor(timed?Color.rgb(174,50,50):Color.rgb(42,91,178));examTimer=new android.os.CountDownTimer(timerLength,1000){public void onTick(long ms){long s=timed?Math.max(0,ms/1000):Math.max(0,(System.currentTimeMillis()-customStartedAt)/1000);clock.setText(String.format(Locale.ROOT,timed?"剩余时间：%02d:%02d":"已用时间：%02d:%02d",s/60,s%60));}public void onFinish(){if(timed)finishCustomPractice();}};examTimer.start();
+         rich(q.optString("section_title"),16);if(q.optInt("question_type")<40&&!q.optString("passage_html").equals(q.optString("section_title")))rich(q.optString("passage_html"),18);rich(q.optString("question_html"),22);renderCustomMedia(q);
+         safe(()->{JSONArray choices=StructuredQuestionLogic.options(q);RadioGroup group=new RadioGroup(this);currentGroup[0]=group;group.setOrientation(RadioGroup.VERTICAL);for(int i=0;i<choices.length();i++){RadioButton choice=new RadioButton(this);choice.setId(3000+i);choice.setText((i+1)+". "+android.text.Html.fromHtml(choices.optString(i),0));choice.setTextSize(19);choice.setPadding(0,dp(8),0,dp(8));group.addView(choice);}body.addView(group);if(customAnswers.has(q.optString("id")))group.check(3000+customAnswers.optInt(q.optString("id")));
+@@ -918,19 +930,11 @@ public class MainActivity extends Activity {
+         if(customDeadline>0){try{store.write(next,false);}catch(Exception e){alert("成绩保存失败："+e.getMessage());}}
+         clearCustomPractice();int total=customQuestions.length(),answered=correct+wrong;screen(customTitle+" · 结果");double rate=answered==0?0:correct*100.0/answered;text(String.format(Locale.ROOT,"正确率 %.1f%%",rate),26);text("共 "+total+" 题 · 已答 "+answered+" · 正确 "+correct+" · 错误 "+wrong+" · 跳过 "+unanswered,18);text("错误题已加入错题本；结果按题库参考答案计算，不等同于JLPT官方尺度分。",14);button("查看错题本",()->{tab=3;notebookPage();});button("返回真题训练中心",this::examTrainingHub);
+     }
+-    private void structuredExamList(String level,String term,int page){
+-        if(!offlineMaster.installed()){prepareOffline(()->structuredExamList(level,term,page));return;}
+-        screen("结构化真题 · "+level);final long token=structuredRequest;text("正在读取原JSON题目…",17);
+-        worker.execute(()->{try{JSONArray rows=offlineMaster.questions(level,term,page);runOnUiThread(()->{if(isFinishing()||isDestroyed()||token!=structuredRequest)return;
+-            screen("结构化真题 · "+level.replace(",","＋"));multiLevelChoice("来源等级",level,value->{examLevels=value;getPreferences(0).edit().putString("exam_levels",examLevels).apply();structuredExamList(value,"",0);});
+-            primary("按场次模拟考试 · 计时与交卷统计",()->examSimulationSessions(level,""));
+-            EditText q=input("年份场次（如2010-07）或题文",term);button("搜索",()->structuredExamList(level,q.getText().toString(),0));
+-            text("89场、9183条原JSON题目；按原答案索引判分，未逐题终审。18条选项／答案索引待核的记录不自动判分。不同数据视图不相加为独有题目数。",14);
+-            text("第 "+(page+1)+" 页 · 每页最多20条",15);
+-            if(rows.length()==0)text("没有符合条件的题目。",18);for(JSONObject row:list(rows)){String label=android.text.Html.fromHtml(row.optString("question_html"),0).toString().trim();if(label.length()>90)label=label.substring(0,90)+"…";button(row.optString("exam_id")+" · 组 "+(row.optInt("section_index")+1)+"\n"+(label.isEmpty()?"听力／图片题，点击查看":label),()->structuredExamDetail(row,level,term,page));}
+-            if(rows.length()==20)button("下一页",()->structuredExamList(level,term,page+1));if(page>0)button("上一页",()->structuredExamList(level,term,page-1));button("返回真题资料",this::examTimeline);
+-        });}catch(Exception e){runOnUiThread(()->{if(token==structuredRequest)alert("真题读取失败："+e.getMessage());});}});
+-    }
++    private String examArea(int type){if(type<=16)return "文字・語彙";if(type<=23)return "文法";if(type<=37)return "読解";return "聴解";}
++    private String examProblem(JSONObject q){String title=android.text.Html.fromHtml(q.optString("section_title"),0).toString();java.util.regex.Matcher m=java.util.regex.Pattern.compile("問題\\s*([0-9０-９一二三四五六七八九十]+)").matcher(title);return m.find()?"問題"+m.group(1):"問題"+(q.optInt("section_index")+1);}
++    private String examSourcePosition(JSONObject q,JSONArray questions,int index){int ordinal=1;for(int i=0;i<index;i++){JSONObject before=questions.optJSONObject(i);if(before!=null&&before.optInt("section_index")==q.optInt("section_index"))ordinal++;}return examArea(q.optInt("question_type"))+" · "+examProblem(q)+" · 第"+ordinal+"题";}
++    private void modulePracticeSetup(String title,String category,String level){screen(title+" · 真题练习");multiLevelChoice("来源等级",level,value->modulePracticeSetup(title,category,value));choose("本组题数",new String[]{"5题","10题","20题","30题"},Arrays.asList(5,10,20,30).indexOf(customCount),i->{customCount=new int[]{5,10,20,30}[i];modulePracticeSetup(title,category,level);});text("题目取自结构化真题库；进入题目后显示原卷问题号和当前练习题号。",14);primary("开始"+title,()->startCustomPractice(title,level,category,customCount,false));button("返回四部分",()->structuredExamList(level,"",0));}
++    private void structuredExamList(String level,String term,int page){if(!offlineMaster.installed()){prepareOffline(()->structuredExamList(level,term,page));return;}screen("历年真题 · 四部分");multiLevelChoice("来源等级",level,value->{examLevels=value;getPreferences(0).edit().putString("exam_levels",examLevels).apply();structuredExamList(value,"",0);});text("真题不再逐题铺满列表。先选择考试部分，再进入问题与题号；完整场次仍可计时模拟。",15);primary("按年份场次完整模拟",()->examSimulationSessions(level,""));grid(new String[]{"文字・語彙","文法","読解","聴解"},new Runnable[]{()->modulePracticeSetup("文字・語彙","汉字读音,汉字书写,词汇语境",level),()->modulePracticeSetup("文法","语法",level),()->modulePracticeSetup("読解","阅读",level),()->modulePracticeSetup("聴解","听力",level)});text("资料规模：89场、9183条题目记录；18条待核记录不自动判分。",14);button("自由组题／自由组卷",this::customPaperBuilder);button("返回真题训练中心",this::examTrainingHub);}
+     private void examSimulationSessions(String level,String term){
+         if(!offlineMaster.installed()){prepareOffline(()->examSimulationSessions(level,term));return;}
+         screen("模拟考试 · "+level);final long token=structuredRequest;text("正在读取场次…",17);
+@@ -958,7 +962,7 @@ public class MainActivity extends Activity {
+     private void examSimulationQuestion(JSONObject run,JSONArray questions,JSONObject session,String listLevel,String term){
+         int index=Math.max(0,Math.min(run.optInt("currentIndex"),questions.length()-1));JSONObject q=questions.optJSONObject(index);if(q==null){alert("题目读取失败");return;}
+         final RadioGroup[] currentGroup={null};examHeader(run.optString("examId")+" · "+run.optString("scope"),index,questions.length(),run.optJSONObject("answers").length(),()->safe(()->{JSONObject next=currentGroup[0]==null?run:selectedExamAnswerOptional(run,q,currentGroup[0],index);store.saveExamRun(ExamSimulationLogic.key(next.getString("examId"),next.getString("scope")),next);examSimulationSetup(session,listLevel,term);Toast.makeText(this,"作答进度已保存",Toast.LENGTH_SHORT).show();}));TextView clock=text("剩余时间：--:--",20);clock.setTextColor(Color.rgb(174,50,50));
+-        long remaining=run.optLong("deadlineAt")-System.currentTimeMillis();if(remaining<=0){finishExamSimulation(run,questions,session,listLevel,term);return;}
++        text(examSourcePosition(q,questions,index),17);long remaining=run.optLong("deadlineAt")-System.currentTimeMillis();if(remaining<=0){finishExamSimulation(run,questions,session,listLevel,term);return;}
+         examTimer=new android.os.CountDownTimer(remaining,1000){public void onTick(long ms){long seconds=Math.max(0,ms/1000);clock.setText(String.format(Locale.ROOT,"剩余时间：%02d:%02d",seconds/60,seconds%60));}public void onFinish(){safe(()->finishExamSimulation(run,questions,session,listLevel,term));}};examTimer.start();
+         rich(q.optString("section_title"),16);if(q.optInt("question_type")<40&&!q.optString("passage_html").equals(q.optString("section_title")))rich(q.optString("passage_html"),18);rich(q.optString("question_html"),22);
+         safe(()->{String image=q.optString("image_ref");if(!image.isEmpty()){File f=examMedia.find(q.optString("exam_id"),image);if(f==null)text("原图尚未导入："+image,14);}
+@@ -1040,10 +1044,10 @@ public class MainActivity extends Activity {
+         })).show();
+     }
+     private void libraryPage(){screen("N2 · 学习库");button("旧版来源资料（待核）",()->v9Page("词汇","",0));grid(new String[]{"词汇","语法","听力专区","历年真题","汉字","专项"},new Runnable[]{this::wordLibrary,()->{query="";page=0;grammarPage();},this::listeningHub,this::examTimeline,()->{query="";page=0;kanjiPage();},this::practiceHub});card(()->{text("当前资料",21);text("词卡 "+words.length()+" · 语法 "+grammar.length()+"\n真题资料 "+exams.length()+" · 汉字 "+kanji.length(),18);text("真题统一进入结构化作答；来源与待核标记继续保留。",14);});}
+-    private void practiceHub(){screen("专项学习");primary("真题专项／自由组题与组卷",this::examTrainingHub);button("词性、惯用语与教材专题",this::wordTopics);button("300拟声拟态词专项",()->{wordScope="300拟声词书";wordStudyState="未学";wordLevel="全部";wordCategory="拟声拟态词";wordLibrary();});button("v9主库检索与词典例句",()->v9Page("词汇","",0));button("动词分类与15项活用样例",this::verbsPage);button("敬语五分类与情境回忆",()->keigoPage("全部"));button("听力省略、语法与词汇",this::listeningHub);button("词典总库／近反义查询",()->dictionarySearch("",0));button("按词性分批学习",this::wordLibrary);button("离线合并主库／真题读音易错",()->offlineMasterPage("词汇","",0));button("返回学习库",this::libraryPage);}
++    private void practiceHub(){screen("专项学习");primary("真题专项／自由组题与组卷",this::examTrainingHub);button("词性、惯用语与教材专题",this::wordTopics);button("300拟声拟态词专项",()->{wordScope="300拟声词书";wordStudyState="未学";wordLevel="全部";wordCategory="拟声拟态词";wordLibrary();});button("v9主库检索与词典例句",()->v9Page("词汇","",0));button("OKJLPT主词库2000+动词",this::verbsPage);button("完整敬语分类与情境回忆",()->keigoPage("全部"));button("听力省略、语法与词汇",this::listeningHub);button("词典总库／近反义查询",()->dictionarySearch("",0));button("按词性分批学习",this::wordLibrary);button("离线合并主库／真题读音易错",()->offlineMasterPage("词汇","",0));button("返回学习库",this::libraryPage);}
+     private void wordLibrary(){screen("词汇分类与学习进度");wordScopeChoice(this::wordLibrary);wordStateChoice(this::wordLibrary);wordLevelChoice(this::wordLibrary);wordFrequencyChoice(this::wordLibrary);button("词性与标签专题",this::wordTopics);text("等级沿用来源参考；同形同读的多等级候选保留，未标级单列，不推定官方等级。",13);int learned=0,mastered=0;for(JSONObject w:list(words)){String id=w.optString("id");if(LearningLogic.learned(store.state,id))learned++;if(LearningLogic.mastered(store.state,id))mastered++;}final int l=learned,m=mastered;card(()->{text("词汇资料 · "+words.length()+" 张（含补充资料）",21);text("已评分／标记 "+l+" · 手动掌握 "+m,18);ProgressBar bar=new ProgressBar(this,null,android.R.attr.progressBarStyleHorizontal);bar.setMax(Math.max(1,words.length()));bar.setProgress(l);body.addView(bar,new LinearLayout.LayoutParams(-1,dp(8)));});
+         choose("每批最多学习",new String[]{"10词","15词","20词","30词","50词"},java.util.Arrays.asList(10,15,20,30,50).indexOf(batchSize),i->{batchSize=new int[]{10,15,20,30,50}[i];getPreferences(0).edit().putInt("batch_size",batchSize).apply();wordLibrary();});
+-        text("优先词表来自6006条源记录（5974个词形）；原源只含词形和等级，释义／读音由已有词卡与词典补充。默认跳过已学和已掌握。",14);
++        text("默认只学习OKJLPT 6006条主词库，保留读音、音调、词性、标签、释义与详情例句；其他来源仅在手动切换后显示。默认跳过已学和已掌握。",14);
+         text("词性采用原表标记；多词性词卡可出现在多个分类，外来语为字形候选，分类数不相加。",13);
+         for(String category:LearningLogic.CATEGORIES){int total=0,done=0;for(JSONObject w:list(words))if(LearningLogic.category(w,category)&&LearningLogic.sourceLevel(w,wordLevel,wordScope)&&wordFilters(w)&&LearningLogic.studyState(store.state,w.optString("id"),wordStudyState)){total++;if(LearningLogic.learned(store.state,w.optString("id")))done++;}final int t=total,d=done;button(category+"\n共 "+t+" 张 · 已评分／标记 "+d,()->{wordCategory=category;screen(category+" · 学习设置");text("候选词卡 "+t+" 张 · 每批最多 "+batchSize+" 词",18);primary("学习未评分的新内容",()->{wordStudyState="未学";startNewBatch(category);});button("复习已学但未掌握",()->{wordStudyState="已学未掌握";batchIds.clear();reviewOnly=false;hideMastered=true;onlyDue=false;wordIndex=0;wordQuery="";revealed=false;partitionIndex=0;wordPage();});button("返回分类",this::wordLibrary);});}
+     }
+diff --git a/app/src/main/java/jp/personal/n2memory/SpeechController.java b/app/src/main/java/jp/personal/n2memory/SpeechController.java
+index 8773053076f630ef7c88990497f6685865bf5442..373cf3ec0add0de970816aacf699382d8aa24208 100644
+--- a/app/src/main/java/jp/personal/n2memory/SpeechController.java
++++ b/app/src/main/java/jp/personal/n2memory/SpeechController.java
+@@ -130,23 +130,26 @@ final class SpeechController {
+         if(text==null||text.trim().isEmpty())throw new IOException("没有可朗读的日语文本");
+         if(text.length()>TextToSpeech.getMaxSpeechInputLength())throw new IOException("文本过长，请分句朗读");
+         File online=cloud.cached(text);if(online.isFile()&&online.length()>128){playFile(online);return;}
+-        if("online".equals(mode())){cloudSpeech(text,true);return;}
++        if(!"offline".equals(mode())){cloudSpeech(text,true);return;}
++        localSpeak(text);
++    }
++    private void localSpeak(String text)throws Exception{
+         File file=audio(text);
+         if(file.isFile()&&file.length()>44){stopPlayer();MediaPlayer p=new MediaPlayer();player=p;p.setDataSource(file.getPath());p.setOnPreparedListener(m->{if(player==m)m.start();});p.setOnCompletionListener(m->{if(player==m)stopPlayer();});p.setOnErrorListener((m,a,b)->{if(player==m)stopPlayer();toast("缓存语音播放失败，可重新生成");return true;});p.prepareAsync();return;}
+-        if(!ready){if(!"offline".equals(mode())){cloudSpeech(text,true);return;}if(initializing){queuedSpeech=text;toast("离线语音正在启动，就绪后自动播放");return;}throw new IOException(status);}
++        if(!ready){if(initializing){queuedSpeech=text;toast("离线语音正在启动，就绪后自动播放");return;}throw new IOException(status);}
+         stopPlayer();speaking.clear();String id="speak:"+UUID.randomUUID();speaking.put(id,text);
+-        Bundle params=new Bundle();params.putString(TextToSpeech.Engine.KEY_FEATURE_NETWORK_TIMEOUT_MS,"10000");params.putString(TextToSpeech.Engine.KEY_FEATURE_NETWORK_RETRIES_COUNT,"1");
+-        if(engine.speak(text,TextToSpeech.QUEUE_FLUSH,params,id)==TextToSpeech.ERROR){speaking.remove(id);if(!"offline".equals(mode()))cloudSpeech(text,true);else throw new IOException("离线朗读请求失败，请切换引擎");}
++        Bundle params=new Bundle();params.putString(TextToSpeech.Engine.KEY_FEATURE_NETWORK_TIMEOUT_MS,"10000");params.putString(TextToSpeech.Engine.KEY_FEATURE_NETWORK_RETRIES_COUNT,"1");params.putFloat(TextToSpeech.Engine.KEY_PARAM_VOLUME,1.0f);toast("正在播放日语发音");
++        if(engine.speak(text,TextToSpeech.QUEUE_FLUSH,params,id)==TextToSpeech.ERROR){speaking.remove(id);throw new IOException("离线朗读请求失败，请切换引擎");}
+     }
+     private void cancelCloud(){playbackRequest++;if(cloudTask!=null){cloudTask.cancel(true);cloudTask=null;}}
+     private void cloudSpeech(String text,boolean play){
+         cancelCloud();final long ticket=playbackRequest;queuedSpeech="";speaking.clear();if(engine!=null)engine.stop();stopPlayer();
+         status("正在联网合成日语，完成后自动缓存…");toast("正在准备日语发音…");
+-        cloudTask=network.submit(()->{try{File file=cloud.synthesize(text);handler.post(()->{if(closed||ticket!=playbackRequest)return;status("联网语音已缓存 · "+cloud.credit());if(play)playFile(file);else toast("此发音已保存，可离线播放");});}catch(Exception e){handler.post(()->{if(!closed&&ticket==playbackRequest){status("联网发音失败："+e.getMessage());toast(status);}});}});
++        cloudTask=network.submit(()->{try{File file=cloud.synthesize(text);handler.post(()->{if(closed||ticket!=playbackRequest)return;status("联网语音已缓存 · "+cloud.credit());if(play)playFile(file);else toast("此发音已保存，可离线播放");});}catch(Exception e){handler.post(()->{if(closed||ticket!=playbackRequest)return;if(ready){status("联网发音暂不可用，已切换本机日语语音");try{localSpeak(text);}catch(Exception local){toast("日语发音失败："+local.getMessage());}}else{status("联网发音失败："+e.getMessage());toast(status);}});}});
+     }
+     private void playFile(File file){
+         speaking.clear();if(engine!=null)engine.stop();stopPlayer();MediaPlayer p=new MediaPlayer();player=p;
+-        try{p.setAudioAttributes(new AudioAttributes.Builder().setUsage(AudioAttributes.USAGE_MEDIA).setContentType(AudioAttributes.CONTENT_TYPE_SPEECH).build());p.setDataSource(file.getPath());p.setOnPreparedListener(m->{if(player==m&&!closed)m.start();});p.setOnCompletionListener(m->{if(player==m)stopPlayer();});p.setOnErrorListener((m,a,b)->{if(player==m)stopPlayer();file.delete();toast("缓存语音播放失败，请再次点击生成");return true;});p.prepareAsync();}catch(Exception e){stopPlayer();toast("音频无法播放："+e.getMessage());}
++        try{p.setAudioAttributes(new AudioAttributes.Builder().setUsage(AudioAttributes.USAGE_MEDIA).setContentType(AudioAttributes.CONTENT_TYPE_SPEECH).build());p.setDataSource(file.getPath());p.setOnPreparedListener(m->{if(player==m&&!closed){m.start();toast("正在播放日语发音");}});p.setOnCompletionListener(m->{if(player==m)stopPlayer();});p.setOnErrorListener((m,a,b)->{if(player==m)stopPlayer();file.delete();toast("缓存语音播放失败，请再次点击生成");return true;});p.prepareAsync();}catch(Exception e){stopPlayer();toast("音频无法播放："+e.getMessage());}
+     }
+     void retry(String text){queuedSpeech=text==null?"":text;initialize();}
+     void cache(String text)throws Exception{
+diff --git a/scripts/expand_keigo_v27.py b/scripts/expand_keigo_v27.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..1067cc1bf4ca3a9f97844d8ed2c4704b329ce82e
+--- /dev/null
++++ b/scripts/expand_keigo_v27.py
+@@ -0,0 +1,73 @@
++import json
++from pathlib import Path
++
++path = Path(__file__).parents[1] / "app/src/main/assets/keigo_samples.json"
++rows = json.loads(path.read_text(encoding="utf-8"))
++
++extra = [
++    ("する", "なさる", "なさる", "尊敬语", "社長は説明をなさいました。", "尊敬对方的动作；ます形为なさいます。"),
++    ("くれる", "くださる", "くださる", "尊敬语", "先生が資料をくださいました。", "动作主体是对方；ます形为くださいます。"),
++    ("知っている", "ご存じだ", "ごぞんじだ", "尊敬语", "この件をご存じですか。", "不能写成「ご存じている」。"),
++    ("寝る", "お休みになる", "おやすみになる", "尊敬语", "先生はもうお休みになりました。", "「休む」也可能表示休假，须结合语境。"),
++    ("着る", "お召しになる", "おめしになる", "尊敬语", "すてきなスーツをお召しですね。", "用于衣着；不要与「召し上がる」混淆。"),
++    ("来る", "お越しになる", "おこしになる", "尊敬语", "明日は何時にお越しになりますか。", "正式场合常用。"),
++    ("来る", "お見えになる", "おみえになる", "尊敬语", "部長がお見えになりました。", "表示尊敬对象来到现场。"),
++    ("动词", "お〜になる", "お〜になる", "尊敬语", "こちらでお待ちになりますか。", "通常接和语动词ます形；不是所有动词都自然。"),
++    ("サ变动词", "ご〜になる", "ご〜になる", "尊敬语", "先生がご説明になりました。", "通常接汉语词サ变动词。"),
++    ("动词", "お〜ください", "お〜ください", "尊敬语", "少々お待ちください。", "尊敬形式的请求表达。"),
++    ("サ变动词", "ご〜ください", "ご〜ください", "尊敬语", "こちらにご記入ください。", "通常接汉语词サ变动词词干。"),
++    ("読む", "お読みになる", "およみになる", "尊敬语", "この資料をお読みになりましたか。", "比尊敬助动词「読まれる」更明确。"),
++    ("会う", "お目にかかる", "おめにかかる", "谦让语Ⅰ", "先生にお目にかかれて光栄です。", "降低自己，抬高会面的对象。"),
++    ("もらう・食べる・飲む", "いただく", "いただく", "谦让语Ⅰ", "先生から本をいただきました。", "用于从尊敬对象处接受；吃喝时也可使用。"),
++    ("あげる", "差し上げる", "さしあげる", "谦让语Ⅰ", "私から先生にご連絡を差し上げます。", "不能对上级说成施恩语气，需注意场景。"),
++    ("借りる", "拝借する", "はいしゃくする", "谦让语Ⅰ", "資料を拝借してもよろしいでしょうか。", "正式表达。"),
++    ("読む", "拝読する", "はいどくする", "谦让语Ⅰ", "先生の論文を拝読しました。", "阅读尊敬对象的文章或来信。"),
++    ("受け取る", "拝受する", "はいじゅする", "谦让语Ⅰ", "メールを拝受しました。", "商务书面语。"),
++    ("知っている", "存じ上げる", "ぞんじあげる", "谦让语Ⅰ", "田中先生を存じ上げております。", "多用于认识某人；知道事情常用「存じる」。"),
++    ("承知する", "承る", "うけたまわる", "谦让语Ⅰ", "ご注文を承りました。", "可表示恭敬地听取或接受。"),
++    ("接受・明白", "かしこまる", "かしこまる", "谦让语Ⅰ", "かしこまりました。", "服务场景表示郑重接受。"),
++    ("动词", "お〜する", "お〜する", "谦让语Ⅰ", "荷物をお持ちします。", "自己为尊敬对象做某事。"),
++    ("サ变动词", "ご〜する", "ご〜する", "谦让语Ⅰ", "会場までご案内します。", "通常接汉语词サ变动词词干。"),
++    ("动词", "お〜いたす", "お〜いたす", "谦让语Ⅰ", "後ほどお電話いたします。", "比「お〜する」更郑重。"),
++    ("サ变动词", "ご〜いたす", "ご〜いたす", "谦让语Ⅰ", "改めてご連絡いたします。", "商务场景常用。"),
++    ("いる", "おる", "おる", "谦让语Ⅱ（丁重语）", "私は受付におります。", "郑重叙述己方存在，不直接抬高对象。"),
++    ("ある", "ござる", "ござる", "谦让语Ⅱ（丁重语）", "資料はこちらにございます。", "现代通常以「ございます」出现。"),
++    ("思う・知る", "存じる", "ぞんじる", "谦让语Ⅱ（丁重语）", "そのように存じます。", "郑重叙述自己的认识或想法。"),
++    ("来る", "参上する", "さんじょうする", "谦让语Ⅰ", "明日こちらから参上します。", "表示到尊敬对象处去，较正式。"),
++    ("です", "でございます", "でございます", "丁宁语", "こちらが申込書でございます。", "比「です」更郑重。"),
++    ("あります", "ございます", "ございます", "丁宁语", "在庫がございます。", "「ある」的郑重表达。"),
++    ("ない", "ございません", "ございません", "丁宁语", "問題はございません。", "正式否定表达。"),
++    ("名前", "お名前", "おなまえ", "美化语", "お名前をお願いします。", "也含对对方事物的礼貌。"),
++    ("金", "お金", "おかね", "美化语", "お金を払います。", "惯用美化语。"),
++    ("茶", "お茶", "おちゃ", "美化语", "お茶をどうぞ。", "惯用美化语。"),
++    ("米", "お米", "おこめ", "美化语", "お米を買いました。", "惯用美化语。"),
++    ("住所", "ご住所", "ごじゅうしょ", "美化语", "ご住所をご記入ください。", "通常对汉语词加「ご」。"),
++    ("待たせた", "お待たせいたしました", "おまたせいたしました", "商务固定表达", "大変お待たせいたしました。", "向顾客或对方郑重致歉。"),
++    ("对不起", "申し訳ございません", "もうしわけございません", "商务固定表达", "ご迷惑をおかけし、申し訳ございません。", "正式道歉；不能只靠敬语替代具体说明。"),
++    ("麻烦您", "恐れ入ります", "おそれいります", "商务固定表达", "恐れ入りますが、もう一度お願いします。", "请求前缓和语气，也可表示感谢。"),
++    ("承蒙关照", "お世話になっております", "おせわになっております", "商务固定表达", "いつもお世話になっております。", "商务邮件和电话常用开场。"),
++    ("拜托了", "よろしくお願いいたします", "よろしくおねがいいたします", "商务固定表达", "ご確認のほど、よろしくお願いいたします。", "用于请求、合作或收尾。"),
++    ("失礼", "失礼いたします", "しつれいいたします", "商务固定表达", "それでは、失礼いたします。", "进入、离开、挂电话等场景。"),
++    ("请稍等", "少々お待ちくださいませ", "しょうしょうおまちくださいませ", "商务固定表达", "確認いたしますので、少々お待ちくださいませ。", "服务用语；「ませ」增加礼貌但不宜滥用。"),
++]
++
++seen = {(r["base"], r["expression"], r["type"]) for r in rows}
++for base, expression, reading, kind, example, caution in extra:
++    if (base, expression, kind) in seen:
++        continue
++    rows.append({
++        "id": f"keigo-v27-{len(rows)+1}",
++        "base": base,
++        "expression": expression,
++        "reading": reading,
++        "type": kind,
++        "actor": "自己／己方" if "谦让" in kind else "对方／尊敬对象" if kind == "尊敬语" else "说话人",
++        "target": "根据具体语境判断",
++        "listener": "顾客／上级／正式场合",
++        "situation": "常用敬语与正式场合表达。",
++        "example": example,
++        "caution": caution,
++    })
++
++path.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
++print(len(rows))
+diff --git a/tests/test_v25_notebook_audio.py b/tests/test_v25_notebook_audio.py
+index 40c1a31efd07092784931d1c35b131abf1c34859..44772f3916297591b5e296492477da9dc327d2d3 100644
+--- a/tests/test_v25_notebook_audio.py
++++ b/tests/test_v25_notebook_audio.py
+@@ -11,8 +11,8 @@ structured = (root / "app/src/main/java/jp/personal/n2memory/StructuredQuestionL
+ manifest = (root / "app/src/main/AndroidManifest.xml").read_text(encoding="utf-8")
+ gradle = (root / "app/build.gradle").read_text(encoding="utf-8")
+ 
+-assert "versionCode 26" in gradle
+-assert "versionName '0.26.0'" in gradle
++assert "versionCode 27" in gradle
++assert "versionName '0.27.0'" in gradle
+ 
+ # Word/example speech: local Japanese TTS, independent online fallback, and persistent cache.
+ for marker in ["Locale.JAPANESE", "cloudSpeech(text,true)", "speech_cache", "playFile(online)"]:
+diff --git a/tests/test_v26_navigation_voice.py b/tests/test_v26_navigation_voice.py
+index 9625c366d79c7f5a88b90a02cb15e65fd4c86e49..f74a7805c06440a0afabc9594e303cb72b9ae0ef 100644
+--- a/tests/test_v26_navigation_voice.py
++++ b/tests/test_v26_navigation_voice.py
+@@ -7,9 +7,9 @@ cloud = (root / "app/src/main/java/jp/personal/n2memory/CloudVoiceClient.java").
+ repo = (root / "app/src/main/java/jp/personal/n2memory/OfflineMasterRepository.java").read_text(encoding="utf-8")
+ gradle = (root / "app/build.gradle").read_text(encoding="utf-8")
+ 
+-assert "versionCode 26" in gradle
+-assert "versionName '0.26.0'" in gradle
+-assert "V26 正在载入学习列表" in main
++assert "versionCode 27" in gradle
++assert "versionName '0.27.0'" in gradle
++assert "V27 正在载入学习列表" in main
+ 
+ # Direct source-question detail and generated practice both advance after submit.
+ for marker in ["提交答案并自动下一题", "adjacentStructuredExam(q,level,term,page,1,true)",
+diff --git a/tests/test_v27_content_ux.py b/tests/test_v27_content_ux.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..43e3864ecad3780e416fbd9b94461e575458cd3f
+--- /dev/null
++++ b/tests/test_v27_content_ux.py
+@@ -0,0 +1,27 @@
++import json
++from pathlib import Path
++
++root = Path(__file__).resolve().parents[1]
++main = (root / "app/src/main/java/jp/personal/n2memory/MainActivity.java").read_text(encoding="utf-8")
++speech = (root / "app/src/main/java/jp/personal/n2memory/SpeechController.java").read_text(encoding="utf-8")
++vocab = json.loads((root / "app/src/main/assets/vocabulary.json").read_text(encoding="utf-8"))
++keigo = json.loads((root / "app/src/main/assets/keigo_samples.json").read_text(encoding="utf-8"))
++kanji = json.loads((root / "app/src/main/assets/kanji.json").read_text(encoding="utf-8"))
++
++core = [x for x in vocab if x.get("corePriority")]
++verbs = [x for x in core if "动词" in x.get("studyCategories", [])]
++assert len(core) == 6006
++assert len(verbs) >= 2000
++assert len(keigo) >= 50
++assert len(kanji) == 3500
++assert "showCoreVocabularyInline(w)" in main
++assert "默认OKJLPT 6006主词库" in main
++assert "表外读音默认隐藏" in main
++assert "常用词、例句与中文意思" in main
++assert 'new String[]{"文字・語彙","文法","読解","聴解"}' in main
++assert "examSourcePosition(q,questions,index)" in main
++assert "OKJLPT主词库2000+动词" in main
++assert "商务固定表达" in main
++assert 'if(!"offline".equals(mode())){cloudSpeech(text,true);return;}' in speech
++assert "联网发音暂不可用，已切换本机日语语音" in speech
++print({"version": 27, "core_vocab": len(core), "core_verbs": len(verbs), "keigo": len(keigo), "kanji": len(kanji)})
